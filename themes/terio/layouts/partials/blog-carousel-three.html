@@ -1,0 +1,54 @@
+{{ $dateFormat := .Site.Params.dateFormat }}
+{{ with .Site.Data.content.blog_carousel_three }}
+{{ if .enable }}
+
+<section>
+	<div class="container">
+	  <div class="title-blog">
+		<h2>{{ .title | safeHTML }}</h2>
+		<span>{{ .title | safeHTML }}</span>
+	  </div>
+	  <div class="swiper-container blogswiper">
+		<div class="swiper-wrapper">
+		  {{ range first .numOfItems (where $.Site.RegularPages "Section" "blog") }}
+		  <div class="swiper-slide">
+			<div class="blog-content">
+			  <div class="row">
+				<div class="col-xl-6">
+				  <a href="{{ .Permalink }}"><img class="w-100" alt="img" src="{{ .Params.featureImage | absURL }}"></a>
+				</div>
+				<div class="col-xl-6">
+				  <div class="latest-blog-post">
+				  <a href="{{ .Permalink }}"><i class="fa-regular fa-clock"></i><span>{{ .PublishDate.Format $dateFormat }}</span></a>
+				  <a href="{{ .Permalink }}">
+					<h2>{{ .Title }}</h2>
+				  </a>
+				  <p>{{ .Summary }} &#8230;</p>
+				  <span>{{ i18n "by" }} {{ .Site.Params.authorName }} | {{ with .Params.categories }}{{ delimit . " , "}}{{ end }}</span>
+				</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  {{ end }}
+		</div>
+		<div class="swiper-button-next">
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		</div>
+		<div class="swiper-button-prev">
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		</div>
+	  </div>
+	</div>
+</section>
+
+{{ end }}
+{{ end }}

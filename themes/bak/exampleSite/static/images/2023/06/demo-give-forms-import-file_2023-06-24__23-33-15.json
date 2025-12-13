@@ -1,0 +1,73 @@
+a:1:{i:8;a:84:{s:40:"_kadence_starter_templates_imported_post";a:1:{i:0;s:1:"1";}s:10:"_edit_lock";a:1:{i:0;s:12:"1654093638:9";}s:19:"_give_form_template";a:1:{i:0;s:7:"sequoia";}s:35:"_give_legacy_form_template_settings";a:1:{i:0;N;}s:10:"_edit_last";a:1:{i:0;s:1:"9";}s:27:"_give_levels_minimum_amount";a:1:{i:0;s:9:"10.000000";}s:27:"_give_levels_maximum_amount";a:1:{i:0;s:10:"250.000000";}s:17:"_give_form_status";a:1:{i:0;s:4:"open";}s:36:"_give_classic_form_template_settings";a:1:{i:0;s:1473:"a:6:{s:17:"visual_appearance";a:10:{s:13:"primary_color";s:7:"#4871e2";s:15:"container_style";s:5:"boxed";s:12:"primary_font";s:6:"Roboto";s:14:"display_header";s:7:"enabled";s:12:"main_heading";s:25:"Thank you for supporting!";s:11:"description";s:0:"";s:23:"header_background_image";s:0:"";s:23:"header_background_color";s:7:"#eaedf0";s:12:"secure_badge";s:8:"disabled";s:17:"secure_badge_text";s:20:"100% Secure Donation";}s:15:"donation_amount";a:2:{s:8:"headline";s:0:"";s:11:"description";s:34:"How much would you like to donate?";}s:17:"donor_information";a:2:{s:8:"headline";s:0:"";s:11:"description";s:0:"";}s:19:"payment_information";a:5:{s:8:"headline";s:0:"";s:11:"description";s:0:"";s:24:"donation_summary_enabled";s:8:"disabled";s:24:"donation_summary_heading";s:35:"Here's what you're about to donate:";s:25:"donation_summary_location";s:32:"give_donation_form_before_submit";}s:16:"donation_receipt";a:5:{s:8:"headline";s:37:"Hey {name}, thanks for your donation!";s:11:"description";s:142:"{name}, your contribution means a lot and will be put to good use in making a difference. We’ve sent your donation receipt to {donor_email}.";s:14:"social_sharing";s:8:"disabled";s:20:"sharing_instructions";s:77:"Help spread the word by sharing your support with your friends and followers!";s:15:"twitter_message";s:77:"Help spread the word by sharing your support with your friends and followers!";}s:12:"introduction";a:1:{s:13:"primary_color";s:7:"#4871e2";}}";}s:19:"_give_display_style";a:1:{i:0;s:7:"buttons";}s:21:"_give_payment_display";a:1:{i:0;s:6:"button";}s:26:"_give_form_floating_labels";a:1:{i:0;s:8:"disabled";}s:18:"_give_reveal_label";a:1:{i:0;s:10:"Donate Now";}s:20:"_give_checkout_label";a:1:{i:0;s:10:"Donate Now";}s:21:"_give_display_content";a:1:{i:0;s:8:"disabled";}s:23:"_give_content_placement";a:1:{i:0;N;}s:18:"_give_form_content";a:1:{i:0;N;}s:18:"_give_price_option";a:1:{i:0;s:5:"multi";}s:15:"_give_set_price";a:1:{i:0;s:9:"25.000000";}s:19:"_give_custom_amount";a:1:{i:0;s:7:"enabled";}s:33:"_give_custom_amount_range_minimum";a:1:{i:0;s:8:"5.000000";}s:33:"_give_custom_amount_range_maximum";a:1:{i:0;s:13:"999999.990000";}s:24:"_give_custom_amount_text";a:1:{i:0;s:13:"Custom Amount";}s:21:"_give_donation_levels";a:1:{i:0;s:620:"a:5:{i:0;a:3:{s:8:"_give_id";a:1:{s:8:"level_id";s:1:"0";}s:12:"_give_amount";s:9:"10.000000";s:10:"_give_text";s:0:"";}i:1;a:3:{s:8:"_give_id";a:1:{s:8:"level_id";s:1:"1";}s:12:"_give_amount";s:9:"25.000000";s:10:"_give_text";s:0:"";}i:2;a:3:{s:8:"_give_id";a:1:{s:8:"level_id";s:1:"2";}s:12:"_give_amount";s:9:"50.000000";s:10:"_give_text";s:0:"";}i:3;a:4:{s:8:"_give_id";a:1:{s:8:"level_id";s:1:"3";}s:12:"_give_amount";s:10:"100.000000";s:10:"_give_text";s:0:"";s:13:"_give_default";s:7:"default";}i:4;a:3:{s:8:"_give_id";a:1:{s:8:"level_id";s:1:"5";}s:12:"_give_amount";s:10:"250.000000";s:10:"_give_text";s:0:"";}}";}s:21:"_give_default_gateway";a:1:{i:0;s:6:"global";}s:23:"_give_name_title_prefix";a:1:{i:0;s:6:"global";}s:20:"_give_title_prefixes";a:1:{i:0;s:0:"";}s:19:"_give_company_field";a:1:{i:0;s:6:"global";}s:30:"_give_last_name_field_required";a:1:{i:0;s:6:"global";}s:24:"_give_anonymous_donation";a:1:{i:0;s:6:"global";}s:19:"_give_donor_comment";a:1:{i:0;s:6:"global";}s:20:"_give_logged_in_only";a:1:{i:0;s:7:"enabled";}s:24:"_give_show_register_form";a:1:{i:0;s:4:"none";}s:17:"_give_goal_option";a:1:{i:0;s:8:"disabled";}s:17:"_give_goal_format";a:1:{i:0;s:6:"amount";}s:14:"_give_set_goal";a:1:{i:0;s:12:"10000.000000";}s:29:"_give_number_of_donation_goal";a:1:{i:0;s:1:"1";}s:26:"_give_number_of_donor_goal";a:1:{i:0;s:1:"1";}s:16:"_give_goal_color";a:1:{i:0;s:7:"#2bc253";}s:35:"_give_close_form_when_goal_achieved";a:1:{i:0;s:8:"disabled";}s:32:"_give_form_goal_achieved_message";a:1:{i:0;s:62:"Thank you to all our donors, we have met our fundraising goal.";}s:18:"_give_terms_option";a:1:{i:0;s:6:"global";}s:17:"_give_agree_label";a:1:{i:0;s:0:"";}s:16:"_give_agree_text";a:1:{i:0;s:1860:"Acceptance of any contribution, gift or grant is at the discretion of the Candidate. The Candidate will not accept any gift unless it can be used or expended consistently with the purpose and mission of the Candidate.
+
+No irrevocable gift, whether outright or life-income in character, will be accepted if under any reasonable set of circumstances the gift would jeopardize the donor’s financial security.
+
+The Candidate will refrain from providing advice about the tax or other treatment of gifts and will encourage donors to seek guidance from their own professional advisers to assist them in the process of making their donation.
+
+The Candidate will accept donations of cash or publicly traded securities. Gifts of in-kind services will be accepted at the discretion of the Candidate.
+
+Certain other gifts, real property, personal property, in-kind gifts, non-liquid securities, and contributions whose sources are not transparent or whose use is restricted in some manner, must be reviewed prior to acceptance due to the special obligations raised or liabilities they may pose for Candidate.
+
+The Candidate will provide acknowledgments to donors meeting tax requirements for property received by the charity as a gift. However, except for gifts of cash and publicly traded securities, no value shall be ascribed to any receipt or other form of substantiation of a gift received by Candidate.
+
+The Candidate will respect the intent of the donor relating to gifts for restricted purposes and those relating to the desire to remain anonymous. With respect to anonymous gifts, the Candidate will restrict information about the donor to only those staff members with a need to know.
+
+The Candidate will not compensate, whether through commissions, finders' fees, or other means, any third party for directing a gift or a donor to the Candidate.";}s:22:"_give_form_grid_option";a:1:{i:0;s:7:"default";}s:28:"_give_form_grid_redirect_url";a:1:{i:0;s:0:"";}s:34:"_give_form_grid_donate_button_text";a:1:{i:0;s:0:"";}s:33:"_give_customize_offline_donations";a:1:{i:0;s:6:"global";}s:51:"_give_offline_donation_enable_billing_fields_single";a:1:{i:0;s:8:"disabled";}s:28:"_give_offline_checkout_notes";a:1:{i:0;s:334:"To make an offline donation toward this cause, follow these steps:
+<ol>
+ 	<li>Write a check payable to "{sitename}"</li>
+ 	<li>On the memo line of the check, indicate that the donation is for "{sitename}"</li>
+ 	<li>Mail your check to:</li>
+</ol>
+{offline_mailing_address}
+
+Your tax-deductible donation is greatly appreciated!";}s:19:"_give_email_options";a:1:{i:0;s:6:"global";}s:20:"_give_email_template";a:1:{i:0;s:7:"default";}s:16:"_give_email_logo";a:1:{i:0;s:0:"";}s:15:"_give_from_name";a:1:{i:0;s:9:"Candidate";}s:16:"_give_from_email";a:1:{i:0;s:18:"saylor@ithemes.com";}s:31:"_give_new-donation_notification";a:1:{i:0;s:6:"global";}s:32:"_give_new-donation_email_subject";a:1:{i:0;s:28:"New Donation - #{payment_id}";}s:31:"_give_new-donation_email_header";a:1:{i:0;s:13:"New Donation!";}s:32:"_give_new-donation_email_message";a:1:{i:0;s:290:"Hi there,
+
+This email is to inform you that a new donation has been made on your website: {site_url}.
+
+<strong>Donor:</strong> {name}
+<strong>Donation:</strong> {donation}
+<strong>Amount:</strong> {amount}
+<strong>Payment Method:</strong> {payment_method}
+
+Thank you,
+
+{sitename}";}s:37:"_give_new-donation_email_content_type";a:1:{i:0;s:9:"text/html";}s:28:"_give_new-donation_recipient";a:1:{i:0;s:54:"a:1:{i:0;a:1:{s:5:"email";s:18:"saylor@ithemes.com";}}";}s:35:"_give_donation-receipt_notification";a:1:{i:0;s:6:"global";}s:36:"_give_donation-receipt_email_subject";a:1:{i:0;s:16:"Donation Receipt";}s:35:"_give_donation-receipt_email_header";a:1:{i:0;s:16:"Donation Receipt";}s:36:"_give_donation-receipt_email_message";a:1:{i:0;s:405:"Dear {name},
+
+Thank you for your donation. Your generosity is appreciated! Here are the details of your donation:
+
+<strong>Donor:</strong> {fullname}
+<strong>Donation:</strong> {donation}
+<strong>Donation Date:</strong> {date}
+<strong>Amount:</strong> {amount}
+<strong>Payment Method:</strong> {payment_method}
+<strong>Payment ID:</strong> {payment_id}
+
+{receipt_link}
+
+Sincerely,
+{sitename}";}s:41:"_give_donation-receipt_email_content_type";a:1:{i:0;s:9:"text/html";}s:39:"_give_new-offline-donation_notification";a:1:{i:0;s:6:"global";}s:40:"_give_new-offline-donation_email_subject";a:1:{i:0;s:20:"New Pending Donation";}s:39:"_give_new-offline-donation_email_header";a:1:{i:0;s:21:"New Offline Donation!";}s:40:"_give_new-offline-donation_email_message";a:1:{i:0;s:290:"Hi there,
+
+This email is to inform you that a new donation has been made on your website: {site_url}.
+
+<strong>Donor:</strong> {name}
+<strong>Donation:</strong> {donation}
+<strong>Amount:</strong> {amount}
+<strong>Payment Method:</strong> {payment_method}
+
+Thank you,
+
+{sitename}";}s:45:"_give_new-offline-donation_email_content_type";a:1:{i:0;s:9:"text/html";}s:36:"_give_new-offline-donation_recipient";a:1:{i:0;s:54:"a:1:{i:0;a:1:{s:5:"email";s:18:"saylor@ithemes.com";}}";}s:47:"_give_offline-donation-instruction_notification";a:1:{i:0;s:6:"global";}s:48:"_give_offline-donation-instruction_email_subject";a:1:{i:0;s:42:"{donation} - Offline Donation Instructions";}s:47:"_give_offline-donation-instruction_email_header";a:1:{i:0;s:29:"Offline Donation Instructions";}s:48:"_give_offline-donation-instruction_email_message";a:1:{i:0;s:569:"Hi {name},
+
+Thank you for letting us know that you're mailing a check! Your generosity is greatly appreciated. Here are those steps again:
+<ol>
+ 	<li>Write a check payable to "{sitename}"</li>
+ 	<li>On the memo line of the check, indicate that the donation is for "{form_title}"</li>
+ 	<li>Mail your check to:</li>
+</ol>
+{offline_mailing_address}
+
+Once we receive the check, we will mark it as complete in our system, which will generate an email receipt for your records. Please contact us with any questions you may have!
+
+Thanks in advance!
+
+{sitename}";}s:53:"_give_offline-donation-instruction_email_content_type";a:1:{i:0;s:9:"text/html";}s:24:"_give_form_goal_progress";a:1:{i:0;s:2:"-1";}s:21:"_kad_post_transparent";a:1:{i:0;s:7:"default";}s:15:"_kad_post_title";a:1:{i:0;s:7:"default";}s:16:"_kad_post_layout";a:1:{i:0;s:7:"default";}s:23:"_kad_post_content_style";a:1:{i:0;s:7:"default";}s:26:"_kad_post_vertical_padding";a:1:{i:0;s:7:"default";}s:36:"_give_sequoia_form_template_settings";a:1:{i:0;s:1694:"a:5:{s:17:"visual_appearance";a:3:{s:13:"primary_color";s:7:"#4871e2";s:12:"google-fonts";s:7:"enabled";s:16:"decimals_enabled";s:8:"disabled";}s:12:"introduction";a:6:{s:7:"enabled";s:8:"disabled";s:8:"headline";s:13:"Donation Form";s:11:"description";s:104:"Help our organization by donating today! All donations go directly to making a difference for our cause.";s:5:"image";s:0:"";s:12:"donate_label";s:10:"Donate Now";s:13:"primary_color";s:7:"#4871e2";}s:14:"payment_amount";a:4:{s:12:"header_label";s:24:"Thanks for your support!";s:7:"content";s:161:"How much would you like to donate? As a contributor to Candidate we make sure your donation goes directly to supporting our cause. Thank you for your generosity!";s:10:"next_label";s:8:"Continue";s:16:"decimals_enabled";s:8:"disabled";}s:19:"payment_information";a:7:{s:12:"header_label";s:20:"Add Your Information";s:8:"headline";s:19:"Who's giving today?";s:11:"description";s:49:"We’ll never share this information with anyone.";s:24:"donation_summary_enabled";s:7:"enabled";s:24:"donation_summary_heading";s:35:"Here's what you're about to donate:";s:25:"donation_summary_location";s:32:"give_donation_form_before_submit";s:14:"checkout_label";s:10:"Donate Now";}s:9:"thank-you";a:6:{s:5:"image";s:0:"";s:8:"headline";s:22:"A great big thank you!";s:11:"description";s:142:"{name}, your contribution means a lot and will be put to good use in making a difference. We’ve sent your donation receipt to {donor_email}.";s:7:"sharing";s:7:"enabled";s:19:"sharing_instruction";s:77:"Help spread the word by sharing your support with your friends and followers!";s:15:"twitter_message";s:38:"I just gave to this cause. Who's next?";}}";}}}

@@ -1,0 +1,46 @@
+{{ with .Site.Data.content.services_two }}
+{{ if .enable }}
+
+<section class="gap services-two no-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-5">
+        <div class="heading">
+          <h6>{{ .subtitle | safeHTML }}</h6>
+          <h2>{{ .title | safeHTML }}</h2>
+          <img alt="line" class="mb-4" src="/images/headingline.png">
+        </div>
+        <div class="welcome-text">
+          {{ range .list }}
+          <h5>{{ .label | safeHTML }}</h5>
+          <p>{{ .value | safeHTML }}</p>
+          {{ end }}
+          <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+        </div>
+      </div>
+      <div class="offset-xl-1 col-xl-6">
+        <div class="welcome two">
+          <img alt="img" src="{{ .image1 | absURL }}">
+          <img alt="img" class="img-welcome" src="{{ .image2 | absURL }}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-4">
+      <img alt="dots1" src="/images/dots1.png">
+    </div>
+    <div class="style-shapes-5">
+      <img alt="dots1" src="/images/shap-3.png">
+    </div>
+    <div class="style-shapes-6">
+      <img alt="dots1" src="/images/shap-2.png">
+    </div>
+    <div class="style-shapes-7">
+      <img alt="dots1" src="/images/shap-5.png">
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

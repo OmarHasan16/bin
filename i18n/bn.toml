@@ -1,0 +1,81 @@
+[all]
+other = "সব"
+
+[readMore]
+other = "আরও পড়ুন"
+
+[by]
+other = "লিখেছেন"
+
+[yourName]
+other = "নাম"
+
+[enterYourName]
+other = "আপনার পুরো নাম লিখুন"
+
+[yourEmail]
+other = "ইমেইল ঠিকানা"
+
+[enterYourEmail]
+other = "আপনার ইমেইল লিখুন"
+
+[yourMessage]
+other = "বার্তা"
+
+[enterYourMessage]
+other = "আপনার বার্তা এখানে লিখুন"
+
+[submit]
+other = "জমা দিন"
+
+[latestPosts]
+other = "সাম্প্রতিক ব্লগ পোস্ট"
+
+[taxonomyPageList]
+other = "নিচে “{{ .Title }}” ট্যাগ বা ক্যাটাগরি যুক্ত পেজগুলো দেওয়া হলো"
+
+[readingTime]
+one = "১ মিনিট পড়ার সময়"
+other = "{{ .Count }} মিনিট পড়ার সময়"
+
+[share]
+other = "শেয়ার করুন"
+
+[shareOn]
+other = "শেয়ার করুন"
+
+[tags]
+other = "ট্যাগ"
+
+[comments]
+other = "মন্তব্য"
+
+[nextPost]
+other = "পরবর্তী পোস্ট"
+
+[prevPost]
+other = "পূর্ববর্তী পোস্ট"
+
+[nextProject]
+other = "পরবর্তী প্রজেক্ট"
+
+[prevProject]
+other = "পূর্ববর্তী প্রজেক্ট"
+
+[successMessage]
+other = "ধন্যবাদ, আপনার বার্তা সফলভাবে পাঠানো হয়েছে।"
+
+[developedBy]
+other = "ডেভেলপ করেছেন"
+
+[category]
+other = "ক্যাটাগরি"
+
+[errorNum]
+other = "৪০৪"
+
+[errorTitle]
+other = "দুঃখিত!"
+
+[errorText]
+other = "আপনি যে পেজটি খুঁজছেন তা পাওয়া যায়নি বা সরানো হয়েছে।"

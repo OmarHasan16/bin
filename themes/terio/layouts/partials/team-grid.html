@@ -1,0 +1,53 @@
+{{ with .Site.Data.content.team_grid }}
+{{ if .enable }}
+
+<section class="team-grid gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="heading">
+          <h6>{{ .subtitle | safeHTML }}</h6>
+          <h2>{{ .title | safeHTML }}</h2>
+          <img alt="line" src="/images/headingline.png">
+        </div>
+      </div>
+      <div class="offset-xl-1 col-xl-5">
+        <div class="team-welcome-text">
+          <p>{{ .description | safeHTML }}</p>
+          <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      {{ range .items }}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+        <div class="team-member">
+          <img class="w-100" alt="{{ .name }}" src="{{ .image | absURL }}">
+          <div class="team-member-text">
+            <h6>{{ .name }}</h6>
+            <p>{{ .role }}</p>
+            <ul class="brandicon">
+              {{ range .social }}
+              <li><a href="{{ .link }}" target="_blank" rel="nofollow" title="{{ .title }}"><i class="{{ .icon }}"></i></a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      {{ if eq .join true }}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+        <div class="join-our-team">
+          <div>
+            <a href="{{ .join_link }}"><h5>{{ .join_title | safeHTML }}</h5></a>
+            <span>{{ .join_subtitle | safeHTML }}</span>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

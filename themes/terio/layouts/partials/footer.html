@@ -1,0 +1,79 @@
+{{ $footer := .Site.Params.footer }}
+{{ $social := .Site.Params.social }}
+{{ $header := .Site.Params.header }}
+{{ $dateFormat := .Site.Params.dateFormat }}
+{{ $numOfItems := .Site.Params.footer.news.numOfItems }}
+{{ $posts := .Site.RegularPages }}
+
+{{ with $footer }}
+{{ "<!-- Footer -->" | safeHTML }}
+<footer class="footer gap no-bottom" style="background-color: #222;">
+    <div class="container">
+        <div class="row">
+            <!-- Logo Section -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="footer-logo">
+                    <a href="{{ .logoLink | default .Site.BaseURL }}" title="{{ .logoTitle | default "10Corp" }}">
+                        <img alt="{{ .logoAlt | default "logo" }}" src="{{ $header.logo.image | absURL }}">
+                    </a>
+                    <p>{{ .description | safeHTML }}</p>
+                </div>
+            </div>
+
+            <!-- Menu Links -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="links">
+                    <h6>{{ .menu.title | safeHTML }}</h6>
+                    <ul>
+                        {{ range .menu.list }}
+                        <li><a href="{{ .link | absURL }}">{{ .title }}</a></li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Latest News -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="latest-news">
+                    <h6>{{ .news.title | safeHTML }}</h6>
+                    <ul>
+                        {{ range first $numOfItems (where $posts "Section" "blog") }}
+                        <li>
+                            <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                            <span>{{ .PublishDate.Format $dateFormat }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="latest-news">
+                    <h6>{{ .subscribe.title | safeHTML }}</h6>
+                    <p>{{ .subscribe.text | safeHTML }}</p>
+                    <form class="subscribe-form" action="{{ .subscribe.mailchimp.url }}" method="post" target="_blank">
+                        <input type="text" name="EMAIL" placeholder="{{ i18n "yourEmailAddress" }}">
+                        <input type="hidden" name="{{ .subscribe.mailchimp.key }}">
+                        <button type="submit">{{ i18n "go" }}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>{{ .copyright }}</p>
+            <ul>
+                {{ range $social }}
+                <li>
+                    <a href="{{ .url }}" target="_blank" title="{{ .title }}">
+                        <i aria-hidden="true" class="{{ .icon }}"></i>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</footer>
+{{ end }}

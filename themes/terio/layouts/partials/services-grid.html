@@ -1,0 +1,30 @@
+{{ with .Site.Data.content.services_grid }}
+{{ if .enable }}
+
+<section class="digital-services gap">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ .subtitle | safeHTML }}</h6>
+      <h2>{{ .title | safeHTML }}</h2>
+      <img alt="line" src="/images/headingline.png">
+    </div>
+    <div class="row">
+      {{ range .items }}
+      <div class="col-xl-6">
+        <div class="discovery-img hoverstyle">
+          <figure>
+            <img class="w-100" alt="image" src="{{ .image | absURL }}">
+          </figure>
+          <div class="discovery-text two">
+            <h4>{{ .title | safeHTML }}</h4>
+            <p>{{ .description | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

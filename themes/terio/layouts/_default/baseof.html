@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+{{ partial "head.html" . }}
+
+<body class="page{{ if .IsHome }} home{{ end }}">
+  {{ partial "preloader.html" . }}
+
+  {{ partial "header.html" . }}
+
+  {{ "<!-- Wrapper -->" | safeHTML }}
+	<div class="wrapper{{ if .IsPage }}{{ if or ( eq .Type "blog" ) ( eq .Type "page" ) }} single-post{{ end }}{{ end }}{{ if .IsPage }}{{ if eq .Type "portfolio" }} project-single{{ end }}{{ end }}" id="content">
+    {{ block "main" . }}{{ end }}
+  </div>
+  
+  {{ "<!-- Footer -->" | safeHTML }}
+  {{ partial "footer.html" . }}
+
+  {{ "<!-- Back to Top -->" | safeHTML }}
+  <a href="#." id="button"></a>
+
+  {{ "<!-- Scripts -->" | safeHTML }}
+  {{ partial "scripts.html" . }}
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+{{ $headerStyle := .Params.headerStyle }}
+{{ $header := .Site.Params.header }}
+
+<header class="header{{ if eq $headerStyle "two" }} two{{ end }}{{ if eq $headerStyle "three" }} three{{ end }}{{ if .IsPage }}{{ if or ( eq .Type "blog" ) ( eq .Type "portfolio" ) }} three{{ end }}{{ end }}"{{ if eq $headerStyle "three" }} style="background-image: url('{{ site.Params.headerBackground | absURL }}');"{{ end }}{{ if .IsPage }}{{ if or ( eq .Type "blog" ) ( eq .Type "portfolio" ) }} style="background-image: url('{{ site.Params.headerBackground | absURL }}');"{{ end }}{{ end }}>
+  <div class="container">
+      <div class="nav">
+        <div class="d-flex align-items-center">
+          <div class="logo">
+            <a href="{{ .Site.BaseURL }}" title="{{ $header.logo.title }}">
+              <img alt="{{ $header.logo.alt }}" src="{{ $header.logo.image | absURL }}">
+            </a>
+          </div>
+          <ul class="menu">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ $menuURL := .URL | absLangURL }}
+            {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+            {{ $active := eq $menuURL $pageURL }}
+            <li class="menu-item{{ if .HasChildren }} menu-item-has-children has-children{{ end }}">
+              <a class="splitting-text-anim-2" data-splitting="chars" href="{{ .URL | absURL }}">{{ .Name }}</a>
+              {{ if .HasChildren }}
+              <ul class="sub-menu">
+                {{ range .Children }}
+                {{ $childURL := .URL | absLangURL }}
+                {{ $active := eq $childURL $pageURL }}
+                <li class="menu-item{{ if $active }} menu-current-item{{ end }}"><a class="splitting-text-anim-1" data-splitting="chars" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+              {{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        <div>
+           <form id="searchForm" class="search-form" action="{{ "search" | absURL }}">
+              <input type="text" class="input search-field" id="searchInput">
+              <button type="reset" class="search" id="search-btn"></button>
+              <ul id="searchResults"></ul>
+            </form>
+            <a href="{{ $header.button.link }}" class="themebtu">{{ $header.button.text }}</a>
+        </div>
+        <div class="bar-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+  </div>
+  <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:none;">
+      <div class="res-log">
+        <a href="{{ .Site.BaseURL }}" title="{{ $header.logo.title }}">
+          <img src="{{ $header.logo.image | absURL }}" alt="{{ $header.logo.alt }}">
+        </a>
+      </div>
+      <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ $menuURL := .URL | absLangURL }}
+        {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+        {{ $active := eq $menuURL $pageURL }}
+        <li class="menu-item{{ if .HasChildren }} menu-item-has-children has-children{{ end }}">
+          <a class="splitting-text-anim-2" data-splitting="chars" href="{{ $.Site.BaseURL }}{{ .URL }}">{{ .Name }}</a>
+          {{ if .HasChildren }}
+          <ul class="sub-menu">
+            {{ range .Children }}
+            {{ $childURL := .URL | absLangURL }}
+            {{ $active := eq $childURL $pageURL }}
+              <li class="menu-item{{ if $active }} menu-current-item{{ end }}"><a class="splitting-text-anim-1" data-splitting="chars" href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+      <a href="JavaScript:void(0)" id="res-cross"></a>
+  </div>
+</header>

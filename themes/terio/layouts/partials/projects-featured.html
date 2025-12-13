@@ -1,0 +1,47 @@
+{{ with .Site.Data.content.projects_featured }}
+{{ if .enable }}
+
+<section class="section-case-studies gap">
+  <div class="container">
+    <div class="heading-boder two">
+      <h2>{{ .title | safeHTML }}</h2>
+    </div>
+    <div class="masonry-row">
+      {{ $firstElem := .first }}
+      {{ range $index, $element := first .numOfItems (where $.Site.RegularPages "Section" "portfolio") }}
+      <div class="case-studies-two{{ if and ( eq $firstElem true ) ( eq $index 0 ) }} case-studies-two__b{{ end }}">
+        <figure>
+          <a href="{{ .Permalink }}"><img alt="{{ .Title }}" class="w-100" src="{{ .Params.image | absURL }}"></a>
+        </figure>
+        <div class="case-studies-text">
+          <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+          <ul>
+            <li>{{ .Params.category }}</li>
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="btugap">
+        <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+    </div>
+    <div class="tp-hero__shapes">
+      <div class="style-shapes-4">
+        <img alt="dots1" src="/images/shap-6.png">
+      </div>
+      <div class="style-shapes-5">
+        <img alt="dots1" src="/images/shap-3.png">
+      </div>
+      <div class="style-shapes-6">
+        <img alt="dots1" src="/images/shap-2.png">
+      </div>
+      <div class="style-shapes-7">
+        <img alt="dots1" src="/images/shap-5.png">
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

@@ -1,0 +1,19 @@
+{{ with .Site.Data.content.clients }}
+{{ if .enable }}
+
+<section class="gap">
+  <div class="container">
+    <div class="our-clients">
+      <h4>{{ .title | safeHTML }}</h4>
+      <span>{{ .subtitle | safeHTML }}</span>
+      <ul>
+        {{ range .items }}
+        <li><img alt="{{ .alt }}" src="{{ .image | absURL }}" title="{{ .title }}"></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

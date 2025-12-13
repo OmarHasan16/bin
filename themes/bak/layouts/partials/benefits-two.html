@@ -1,0 +1,30 @@
+{{ with .Site.Data.content.benefits_two }}
+{{ if .enable }}
+
+<section class="we-deliver-results gap" style="background-color: #f2edf5;">
+  <div class="container">
+    <div class="heading two">
+        <h2>{{ .title | safeHTML }}</h2>
+        <img alt="line" src="/images/headingline.png">
+      </div>
+    <div class="row">
+      {{ range .items }}
+      <div class="col-xl-4 col-lg-6">
+        <div class="makes-us-different-text">
+          <img src="{{ .icon | absURL }}" alt="icon">
+          <h4>{{ .title | safeHTML }}</h4>
+          <p>
+            {{ .description | safeHTML }}
+          </p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="btugap">
+      <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

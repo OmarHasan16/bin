@@ -1,0 +1,254 @@
+# General Settings
+title = "10Corp | Web Design Company | Website Designers in San Diego, Virginia, New York"
+baseURL = "https://www.2set.com/"
+languageCode = "en-us"
+theme = "terio"
+resourceDir = "resources"
+summaryLength = 20
+DefaultContentLanguage = "en"
+disableHugoGeneratorInject = true
+
+[pagination]
+  pagerSize = 6
+
+# Menu Settings
+[menu]
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+  [[menu.main]]
+    identifier = "home-one"
+    parent = "home"
+    name = "Home One"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "home-two"
+    parent = "home"
+    name = "Home Two"
+    url = "/index-2/"
+    weight = 2
+  [[menu.main]]
+    identifier = "home-three"
+    parent = "home"
+    name = "Home Three"
+    url = "/index-3/"
+    weight = 3
+[[menu.main]]
+  identifier = "pages"
+  name = "Pages"
+  url = "/about/"
+  weight = 2
+  [[menu.main]]
+    identifier = "about"
+    parent = "pages"
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    identifier = "team"
+    parent = "pages"
+    name = "Team"
+    url = "/team/"
+    weight = 2
+  [[menu.main]]
+    identifier = "services"
+    parent = "pages"
+    name = "Services"
+    url = "/services/"
+    weight = 3
+  [[menu.main]]
+    identifier = "pricing"
+    parent = "pages"
+    name = "Pricing"
+    url = "/pricing/"
+    weight = 4
+  [[menu.main]]
+    identifier = "404"
+    parent = "pages"
+    name = "404"
+    url = "/404/"
+    weight = 5
+[[menu.main]]
+  identifier = "portfolio"
+  name = "Portfolio"
+  url = "/portfolio/"
+  weight = 3
+  [[menu.main]]
+    identifier = "portfolio-grid"
+    parent = "portfolio"
+    name = "Portfolio Grid"
+    url = "/portfolio-grid/"
+    weight = 1
+  [[menu.main]]
+    identifier = "portfolio-masonry"
+    parent = "portfolio"
+    name = "Portfolio Masonry"
+    url = "/portfolio-masonry/"
+    weight = 2
+  [[menu.main]]
+    identifier = "portfolio-metro"
+    parent = "portfolio"
+    name = "Portfolio Metro"
+    url = "/portfolio-metro/"
+    weight = 3
+  [[menu.main]]
+    identifier = "portfolio-single"
+    parent = "portfolio"
+    name = "Portfolio Single"
+    url = "/portfolio/boarding-pass-wedding-invitation/"
+    weight = 4
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/blog/"
+  weight = 4
+  [[menu.main]]
+    identifier = "blog-grid"
+    parent = "blog"
+    name = "Blog Grid"
+    url = "/blog/"
+    weight = 1
+  [[menu.main]]
+    identifier = "blog-carousel"
+    parent = "blog"
+    name = "Blog Carousel"
+    url = "/blog-carousel/"
+    weight = 2
+  [[menu.main]]
+    identifier = "blog-single"
+    parent = "blog"
+    name = "Blog Single"
+    url = "/blog/designer-conference-at-florida-2020/"
+    weight = 3  
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = 5
+
+# Main Settings
+[params]
+disableHugoGenerator = true
+dateFormat = "January 2, 2006"
+authorName = "Jane Luna"
+disqusComments = "test"
+formspreeURL = ""
+googleAnalytics = ""
+introBackground = "images/background.jpg"
+headerBackground = "images/header.jpg"
+relatedPostsLimit = 4
+
+# Add Organization Details for Schema Markup
+organization = "10Corp"
+logo = "/images/logo.png"
+telephone = "+17622333344"
+email = "info@10corp.com"
+address = "2709 N Hayden Island Dr. STE 520328"
+addressLocality = "Portland"
+addressRegion = "Oregon"
+postalCode = "97217"
+country = "US"
+openingHours = "Mo-Fr 09:00-17:00"
+priceRange = "$$"
+
+# Preloader Settings
+[params.preloader]
+logo = "images/logo.png"
+
+# Header Settings
+[params.header]
+[params.header.logo]
+image = "images/logo.png"
+alt = "logo"
+title = "10Corp"
+[params.header.button]
+text = "Get Started"
+link = "/contact/"
+
+# Footer Settings
+[params.footer]
+description = "Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare."
+copyright = "© 2025 Web Services LLC - All Rights Reserved | Made with ❤️ in New York"
+[params.footer.menu]
+title = "Additional Links"
+[[params.footer.menu.list]]
+title = "About Us"
+link = "/about/"
+[[params.footer.menu.list]]
+title = "Services"
+link = "/services/"
+[[params.footer.menu.list]]
+title = "Team"
+link = "/team/"
+[[params.footer.menu.list]]
+title = "News"
+link = "/blog/"
+[[params.footer.menu.list]]
+title = "Contact Us"
+link = "/contact/"
+[params.footer.news]
+title = "Latest News"
+numOfItems = 2
+[params.footer.subscribe]
+title = "Subscribe"
+text = "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam."
+[params.footer.subscribe.mailchimp]
+url = "https://bslthemes.us21.list-manage.com/subscribe/post?u=e57127f785a6d278d2535bd53&amp;id=dd56743ee5&amp;f_id=000dfee1f0" #YOUR MAILCHIMP EMBED FORM URL [form action=""]
+key = "b_e57127f785a6d278d2535bd53_dd56743ee5" #YOUR MAILCHIMP EMBED FORM KEY VALUE [input hidden name=""]
+
+# Social Settings
+[[params.social]]
+title = "Facebook"
+icon = "fa-brands fa-facebook-f"
+url = "https://www.facebook.com/10corp"
+weight = 1
+[[params.social]]
+title = "Twitter"
+icon = "fa-brands fa-twitter"
+url = "https://www.twitter.com/10corp"
+weight = 2
+[[params.social]]
+title = "Instagram"
+icon = "fa-brands fa-instagram"
+url = "https://www.instagram.com/10corp"
+weight = 3
+[[params.social]]
+title = "Medium"
+icon = "fa-solid fa-m"
+url = "https://www.medium.com/"
+weight = 4
+[[params.social]]
+title = "Linkedin"
+icon = "fa-brands fa-linkedin-in"
+url = " https://www.linkedin.com/company/10corp/"
+weight = 5
+
+# Portfolio Settings
+[params.portfolio]
+homeNumOfItems = 12
+[[params.portfolio.filters]]
+name = "Design"
+slug = "design"
+[[params.portfolio.filters]]
+name = "Print"
+slug = "print"
+[[params.portfolio.filters]]
+name = "Branding"
+slug = "branding"
+
+# Sitemap Settings
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

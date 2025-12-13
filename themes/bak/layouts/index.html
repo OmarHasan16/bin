@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{ $page := . }}
+
+{{ range $section := $.Params.sections }}
+
+  {{ $partialName := printf "%s.html" $section }}
+  {{ $partialCheckPath := printf "partials/%s" $partialName }}
+
+  {{ if templates.Exists $partialCheckPath }}
+    {{ partial $partialName $page }}
+  {{ end }}
+
+{{ end }}
+
+{{ end }}

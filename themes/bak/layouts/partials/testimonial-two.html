@@ -1,0 +1,28 @@
+{{ with .Site.Data.content.testimonial_two }}
+{{ if .enable }}
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="swiper-container testimonialsswiper">
+      <div class="swiper-wrapper">
+        {{ range .items }}
+        <div class="swiper-slide">
+          <div class="testimonials">
+              <img alt="img" src="{{ .image | absURL }}">
+              <i class="fa-solid fa-quote-right"></i>
+              <div>
+                  <h6>{{ .title | safeHTML }}</h6>
+                  <p>“{{ .text | safeHTML }}”</p>
+                  <span>{{ .author | safeHTML }}</span>
+              </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>    
+  </div>
+</section> 
+
+{{ end }}
+{{ end }}

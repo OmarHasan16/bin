@@ -1,0 +1,49 @@
+
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+
+<div class="next-previous-page">
+  <div class="container">
+    <div class="next-previous">
+      <div class="prev">
+        {{ if $pag.HasPrev }}
+        <a href="{{ $pag.Prev.URL }}">
+        {{ else }}
+        <span>
+        {{ end }}
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+          <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+            405.606,308.713 476.213,238.106 "/>
+          </svg>
+          {{ i18n "prev" }}
+        {{ if $pag.HasPrev }}
+        </a>
+        {{ else }}
+        </span>
+        {{ end }}
+      </div>
+
+      <div class="next">
+        {{ if $pag.HasNext }}
+        <a href="{{ $pag.Next.URL }}">
+        {{ else }}
+        <span>
+        {{ end }}
+          {{ i18n "next" }}
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+          <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+            405.606,308.713 476.213,238.106 "/>
+          </svg>
+        {{ if $pag.HasNext }}
+        </a>
+        {{ else }}
+        </span>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

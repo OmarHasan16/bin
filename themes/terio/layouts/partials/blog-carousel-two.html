@@ -1,0 +1,29 @@
+{{ $dateFormat := .Site.Params.dateFormat }}
+{{ with .Site.Data.content.blog_carousel_two }}
+{{ if .enable }}
+
+<section class="blog-posts gap no-top">
+	<div class="container">
+	  <div class="heading-boder two">
+		<h2>{{ .title | safeHTML }}</h2>
+	  </div>
+	  <div class="swiper-container partnerswiper">
+		<div class="swiper-wrapper">
+		  {{ range first .numOfItems (where $.Site.RegularPages "Section" "blog") }}
+		  <div class="swiper-slide">
+			<div class="blog-posts-text">
+				<a href="{{ .Permalink }}"><i class="fa-solid fa-clock"></i><span>{{ .PublishDate.Format $dateFormat }}</span></a>
+				<h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+				<p>{{ .Summary }} &#8230;</p>
+				<span>{{ i18n "by" }} {{ .Site.Params.authorName }} | {{ with .Params.categories }}{{ delimit . " , "}}{{ end }}</span>
+			</div>
+		  </div>
+		  {{ end }}
+		</div>
+		<div class="swiper-pagination"></div>
+	  </div>
+	</div>
+</section>
+
+{{ end }}
+{{ end }}

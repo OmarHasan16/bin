@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $dateFormat := .Site.Params.dateFormat }}
+
+{{ $intro := .Params.intro }}
+
+{{ if $intro }}
+<section class="splash-area-section" style="background-image: url('{{ site.Params.introBackground | absURL }}')">
+	<div class="container">
+	  <div class="splash-area">
+		<h2>{{ .Params.intro_title | safeHTML }}</h2>
+		<span>{{ .Params.intro_subtitle | safeHTML }}</span>
+	  </div>
+	</div>
+</section>
+{{ end }}
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="row">
+      {{ range .Paginator.Pages }}
+      <div class="col-xl-4 col-md-6">
+        <div class="latest-blog-post hoverstyle">
+          <figure>
+            <a href="{{ .Permalink }}"><img alt="{{ .Title }}" class="w-100" src="{{ .Params.featureImage | absURL }}"></a>
+          </figure>
+          <a href="{{ .Permalink }}"><i class="fa-regular fa-clock"></i><span>{{ .PublishDate.Format $dateFormat }}</span></a>
+          <a href="{{ .Permalink }}">
+            <h4>{{ .Title }}</h4>
+          </a>
+          <span>{{ i18n "by" }} {{ .Site.Params.authorName }} | {{ with .Params.categories }}{{ delimit . " , "}}{{ end }}</span>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "pagination" . }}
+
+{{ end }}

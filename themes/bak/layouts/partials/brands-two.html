@@ -1,0 +1,22 @@
+{{ with .Site.Data.content.brands_two }}
+{{ if .enable }}
+
+<div class="brands-we-work gap">
+  <div class="container">
+    <h6>{{ .title | safeHTML }}</h6>
+    <div class="swiper-container brandswiper">
+      <div class="swiper-wrapper">
+        {{ range .items }}
+        <div class="swiper-slide">
+          <div class="brand-img">
+            <img alt="{{ .alt }}" src="{{ .image | absURL }}" title="{{ .title }}">
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>  
+  </div>
+</div>
+
+{{ end }}
+{{ end }}

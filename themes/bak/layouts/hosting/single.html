@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+  {{ $intro := .Params.intro }}
+
+  {{ if $intro }}
+    <section class="splash-area-section" style="background-image: url('{{ site.Params.introBackground | absURL }}'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="splash-area text-center" style="padding: 100px 0;">
+          <h2 style="color: #fff; font-weight: 700; margin-bottom: 15px;">{{ .Params.intro_title | safeHTML }}</h2>
+          <span style="color: #fff; font-size: 1.2em; display: block;">{{ .Params.intro_subtitle | safeHTML }}</span>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ $builder := .Params.builder }}
+  {{ $page := . }}
+
+  {{ if $builder }}
+
+    {{ range $section := .Params.sections }}
+
+      {{ $partialName := printf "%s.html" $section }}
+      {{ $partialCheckPath := printf "partials/%s" $partialName }}
+
+      {{ if templates.Exists $partialCheckPath }}
+        {{ partial $partialName $page }}
+      {{ end }}
+
+    {{ end }}
+
+  {{ else }}
+
+    <section class="splash-area-section" style="background-image: url('{{ site.Params.introBackground | absURL }}'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="splash-area text-center" style="padding: 100px 0;">
+          <h2 style="color: #fff; font-weight: 700;">{{ .Title }}</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="section section-inner gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+            <div class="post-content">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {{ end }}
+
+{{ end }}

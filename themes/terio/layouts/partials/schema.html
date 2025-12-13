@@ -1,0 +1,240 @@
+<!-- CreativeWork Schema -->
+{{ if .IsPage }}
+    {{ if eq .Type "post" }}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "headline": "{{ .Title | safeJS }}",
+            "description": "{{ if .Description }}{{ .Description | safeJS }}{{ else }}{{ .Summary | safeJS }}{{ end }}",
+            "datePublished": "{{ .Date.Format "2006-01-02" }}",
+            "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+            "author": {
+                "@type": "Person",
+                "name": "{{ .Params.author }}"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{ .Site.Params.organization }}",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ .Site.Params.logo | absURL }}"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ .Permalink }}"
+            },
+            "image": "{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ .Site.Params.defaultPostImage | absURL }}{{ end }}",
+            "keywords": [
+                "{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}"
+            ]
+        }
+        </script>
+    {{ end }}
+{{ end }}
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Params.organization }}",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": "{{ .Site.Params.logo | absURL }}",
+    "telephone": "{{ .Site.Params.telephone }}",
+    "email": "{{ .Site.Params.email }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .Site.Params.address }}",
+        "addressLocality": "{{ .Site.Params.addressLocality }}",
+        "addressRegion": "{{ .Site.Params.addressRegion }}",
+        "postalCode": "{{ .Site.Params.postalCode }}",
+        "addressCountry": "{{ .Site.Params.country }}"
+    }
+}
+</script>
+
+<!-- LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{ .Site.Params.organization }}",
+    "image": "{{ .Site.Params.logo | absURL }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .Site.Params.address }}",
+        "addressLocality": "{{ .Site.Params.addressLocality }}",
+        "addressRegion": "{{ .Site.Params.addressRegion }}",
+        "postalCode": "{{ .Site.Params.postalCode }}",
+        "addressCountry": "{{ .Site.Params.country }}"
+    },
+    "telephone": "{{ .Site.Params.telephone }}",
+    "email": "{{ .Site.Params.email }}",
+    "priceRange": "{{ .Site.Params.priceRange }}",
+    "openingHours": "{{ .Site.Params.openingHours }}"
+}
+</script>
+
+<!-- Review Schema Example -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "author": {
+        "@type": "Person",
+        "name": "John Doe"
+    },
+    "datePublished": "2024-01-01",
+    "reviewBody": "Great service and very professional.",
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+    },
+    "name": "{{ .Site.Params.organization }}",
+    "image": "{{ .Site.Params.logo | absURL }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .Site.Params.address }}",
+        "addressLocality": "{{ .Site.Params.addressLocality }}",
+        "addressRegion": "{{ .Site.Params.addressRegion }}",
+        "postalCode": "{{ .Site.Params.postalCode }}",
+        "addressCountry": "{{ .Site.Params.country }}"
+    },
+    "telephone": "{{ .Site.Params.telephone }}",
+    "email": "{{ .Site.Params.email }}",
+    "priceRange": "{{ .Site.Params.priceRange }}",
+    "openingHours": "{{ .Site.Params.openingHours }}",
+    "itemReviewed": {
+        "@type": "Service",
+        "name": "{{ .Site.Params.organization }}",
+        "serviceType": "Website Builder Service"
+    }
+}
+</script>
+
+<!-- Service Schema Example for Standard Plan -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Website Builder - Standard Plan",
+    "description": "Inisi neque aliquet vel dapibus id, mattis velnisi. Sed pretiuligula sollicitudin.",
+    "provider": {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.organization }}",
+        "url": "{{ .Site.BaseURL }}",
+        "telephone": "{{ .Site.Params.telephone }}",
+        "email": "{{ .Site.Params.email }}"
+    },
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "299.99",
+        "priceValidUntil": "2025-12-31", 
+        "url": "{{ .Permalink }}",
+        "eligibleRegion": {
+            "@type": "Place",
+            "name": "Worldwide"
+        }
+    }
+}
+</script>
+
+<!-- Service Schema Example for Popular Plan -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Website Builder - Popular Plan",
+    "description": "Aliquet vel dapibus id, mattis velnisi. Sed pretiuligula sollicitudin.",
+    "provider": {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.organization }}",
+        "url": "{{ .Site.BaseURL }}",
+        "telephone": "{{ .Site.Params.telephone }}",
+        "email": "{{ .Site.Params.email }}"
+    },
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "599.99",
+        "priceValidUntil": "2025-12-31", 
+        "url": "{{ .Permalink }}",
+        "eligibleRegion": {
+            "@type": "Place",
+            "name": "Worldwide"
+        }
+    }
+}
+</script>
+
+<!-- Service Schema Example for Enterprise Plan -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Website Builder - Enterprise Plan",
+    "description": "Sed pretiuligula sollicitudin nullam mollis. Ut justo. Suspendisse potenti.",
+    "provider": {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.organization }}",
+        "url": "{{ .Site.BaseURL }}",
+        "telephone": "{{ .Site.Params.telephone }}",
+        "email": "{{ .Site.Params.email }}"
+    },
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "899.99",
+        "priceValidUntil": "2025-12-31", 
+        "url": "{{ .Permalink }}",
+        "eligibleRegion": {
+            "@type": "Place",
+            "name": "Worldwide"
+        }
+    }
+}
+</script>
+
+<!-- New Organization and LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Params.organization }}",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": "{{ .Site.Params.logo | absURL }}",
+    "telephone": "{{ .Site.Params.telephone }}",
+    "email": "{{ .Site.Params.email }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .Site.Params.address }}",
+        "addressLocality": "{{ .Site.Params.addressLocality }}",
+        "addressRegion": "{{ .Site.Params.addressRegion }}",
+        "postalCode": "{{ .Site.Params.postalCode }}",
+        "addressCountry": "{{ .Site.Params.country }}"
+    },
+    "sameAs": [
+        "{{ .Site.Params.socialFacebook }}",
+        "{{ .Site.Params.socialTwitter }}",
+        "{{ .Site.Params.socialInstagram }}"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{ .Site.Params.telephone }}",
+        "contactType": "Customer Service"
+    },
+    "additionalType": "https://schema.org/LocalBusiness",
+    "priceRange": "{{ .Site.Params.priceRange }}",
+    "openingHours": "{{ .Site.Params.openingHours }}",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "bestRating": "5",
+        "ratingCount": "100"
+    }
+}
+</script>

@@ -1,0 +1,27 @@
+{{ $dateFormat := .Site.Params.dateFormat }}
+{{ with .Site.Data.content.blog_grid }}
+{{ if .enable }}
+
+<section class="gap no-top">
+	<div class="container">
+	  <div class="row">
+		{{ range first .numOfItems (where $.Site.RegularPages "Section" "blog") }}
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="latest-blog-post hoverstyle">
+			<figure>
+				<a href="{{ .Permalink }}"><img alt="img" class="w-100" src="{{ .Params.featureImage | absURL }}"></a>
+			</figure>
+			<a href="{{ .Permalink }}"><i class="fa-regular fa-clock"></i><span>{{ .PublishDate.Format $dateFormat }}</span></a>
+			<a href="{{ .Permalink }}">
+				<h4>{{ .Title }}</h4>
+			</a>
+			<span>{{ i18n "by" }} {{ .Site.Params.authorName }} | {{ with .Params.categories }}{{ delimit . " , "}}{{ end }}</span>
+		  </div>
+		</div>
+		{{ end }}
+	  </div>
+	</div>
+</section>
+
+{{ end }}
+{{ end }}

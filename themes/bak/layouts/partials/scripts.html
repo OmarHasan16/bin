@@ -1,0 +1,18 @@
+<script src="{{ "plugins/jQuery/jquery.min.js" | absURL }}"></script>
+<script src="{{ "plugins/bootstrap/bootstrap.js" | absURL }}"></script>
+<script src="{{ "plugins/swiper/swiper.js" | absURL }}"></script>
+<script src="{{ "plugins/imagesloaded/imagesloaded.pkgd.js" | absURL }}"></script>
+<script src="{{ "plugins/isotope/isotope.pkgd.js" | absURL }}"></script>
+<script src="{{ "plugins/isotope/isotope-init.js" | absURL }}"></script>
+<script src="{{ "plugins/validate/jquery.validate.min.js" | absURL }}"></script>
+<script src="{{ "plugins/fancybox/jquery.fancybox.min.js" | absURL }}"></script>
+<script src="{{ "plugins/rrssb/rrssb.js" | absURL }}"></script>
+<script src="{{ "plugins/mark/mark.js" | absURL }}"></script>
+<script src="{{ "plugins/fuse/fuse.js" | absURL }}"></script>
+<script src="{{ "plugins/search/simple-search.js" | absURL }}"></script>
+
+{{ $formhandler := resources.Get "js/form-handler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script>
+
+{{ $script := resources.Get "js/common.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>

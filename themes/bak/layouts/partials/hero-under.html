@@ -1,0 +1,25 @@
+{{ with .Site.Data.content.hero_under }}
+{{ if .enable }}
+
+<div>
+  <div class="container">
+    <div class="small-services-color">
+      <div class="row">
+        {{ range .items }}
+        <div class="col-xl-4 col-lg-6">
+          <div class="small-services">
+            <img src="{{ .image }}" alt="icon">
+            <div>
+              <a href="{{ .link }}">{{ .title }}</a>
+              <span>{{ .subtitle }}</span>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}
+{{ end }}

@@ -1,0 +1,24 @@
+{{ with .Site.Data.content.numbers_two }}
+{{ if .enable }}
+
+<div class="counter-style gap">
+  <div class="container">
+    <div class="row">
+      {{ range .items }}
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="counter-text">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="counter" data-target="{{ .value }}"></div>
+            {{ if eq .plus true }}<h6>+</h6>{{ end }}
+          </div>
+          <div class="boder"></div>
+          <span>{{ .label }}</span>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{ end }}
+{{ end }}

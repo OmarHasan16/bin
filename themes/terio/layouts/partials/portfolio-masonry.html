@@ -1,0 +1,35 @@
+{{ $portfolio := .Site.Params.portfolio }}
+
+<section class="gap">
+  <div class="container">
+    <div class="row">
+      <div class="portfolios">
+      <div class="filters portfolio-controllers-container">
+        <div class=" portfolio-controllers wow fadeLeft button-group js-radio-button-group" data-wow-duration="1s" data-wow-delay=".1s" data-filter-group="color">
+            <button type="button" class="button is-checked filter-btn active-work" data-filter="">{{ i18n "all" }}</button>
+            {{ range $portfolio.filters }}
+            <button type="button" class="filter-btn" data-filter=".sorting-{{ .slug }}">{{ .name }}</button>
+            {{ end }}
+        </div>
+      </div>
+       
+      <div class="masonry-grid grid row align-items-center">
+        {{ range first $portfolio.homeNumOfItems (where $.Site.RegularPages "Section" "portfolio") }}
+        <div class="col-lg-4 col-md-6 col-sm-6 portfolio-img sorting-{{ .Params.category_slug }}"> 
+          <div class="portfolio-detail">
+            <div class="portfolio-img hoverstyle">
+              <figure>
+                <a href="{{ .Permalink }}"><img class="w-100" alt="{{ .Title }}" src="{{ .Params.image | absURL }}"></a>
+              </figure>
+              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+              <span>{{ .Params.short }}</span>
+              <a href="{{ .Permalink }}">{{ i18n "viewProject" }}</a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

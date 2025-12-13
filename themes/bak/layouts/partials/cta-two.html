@@ -1,0 +1,12 @@
+{{ with .Site.Data.content.cta_two }}
+{{ if .enable }}
+
+<div class="container">
+  <div class="awesome-project">
+    <h4>{{ .title | safeHTML }}</h4>
+    <a href="{{ .link }}" class="themebtu full">{{ .button }}</a>
+  </div>
+</div>
+
+{{ end }}
+{{ end }}

@@ -1,0 +1,164 @@
+{{ define "main" }}
+
+<header class="splash-area-section" role="banner" style="background-image: url('{{ site.Params.introBackground | absURL }}');">
+    <div class="container">
+        <div class="splash-area">
+            <h1 class="post-main-title">{{ .Title }}</h1>
+            
+            <div class="splash-meta" aria-label="Post Metadata">
+                <span class="meta-item">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i> 
+                    {{ .Params.author | default "Admin" }}
+                </span>
+                <span class="meta-separator" aria-hidden="true">|</span>
+                <span class="meta-item">
+                    <i class="fa-solid fa-calendar" aria-hidden="true"></i> 
+                    {{ .Date.Format "June 2, 2006" }}
+                </span>
+                <span class="meta-separator" aria-hidden="true">|</span>
+                <span class="meta-item">
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i> 
+                    {{ .ReadingTime }} min read
+                </span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="section section-inner gap">
+    <div class="container">
+        <div class="row">
+
+            <aside class="col-lg-4 col-md-12 order-2 order-lg-1 sidebar-wrapper" role="complementary">
+                <div class="sticky-sidebar">
+                    
+                    <div class="widget search-widget">
+                        <h4 class="widget-title">Search</h4>
+                        <form action="/search" method="get" class="search-form">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search blog">
+                            <button type="submit" aria-label="Submit Search"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="widget category-widget">
+                        <h4 class="widget-title">Categories</h4>
+                        <ul>
+                            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                            <li>
+                                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">
+                                    {{ $name | humanize }} 
+                                    <span class="cat-count">({{ $taxonomy.Count }})</span>
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <div class="widget recent-posts-widget">
+                         <h4 class="widget-title">Recent Posts</h4>
+                         <ul>
+                            {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+                            <li>
+                                <a href="{{ .RelPermalink }}" class="recent-post-link">
+                                    <span class="recent-title">{{ .Title }}</span>
+                                    <small class="recent-date">{{ .Date.Format "Jan 2, 2006" }}</small>
+                                </a>
+                            </li>
+                            {{ end }}
+                         </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <article class="col-lg-8 col-md-12 order-1 order-lg-2" role="main">
+                <div class="post-content">
+                    
+                    {{ with .Params.image }}
+                    <figure class="post-featured-image">
+                        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="img-fluid" loading="lazy">
+                    </figure>
+                    {{ end }}
+
+                    <div class="entry-content">
+                        {{ .Content }}
+                    </div>
+                    
+                    <div class="share-section">
+                        <h5>Share this post:</h5>
+                        <div class="share-buttons-grid">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn btn-facebook">
+                                <i class="fa-brands fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn btn-x">
+                                <i class="fa-brands fa-x-twitter"></i> X
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink | urlquery }}&title={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn btn-linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://api.whatsapp.com/send?text={{ .Title | urlquery }}%20{{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" class="share-btn btn-whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <nav class="post-navigation">
+                        <div class="row">
+                            <div class="col-6 text-start">
+                                {{ with .PrevInSection }}
+                                <a href="{{ .RelPermalink }}" class="nav-link prev-post">
+                                    <span class="nav-label"><i class="fa fa-arrow-left"></i> Previous</span>
+                                    <span class="nav-title">{{ .Title }}</span>
+                                </a>
+                                {{ end }}
+                            </div>
+                            <div class="col-6 text-end">
+                                {{ with .NextInSection }}
+                                <a href="{{ .RelPermalink }}" class="nav-link next-post">
+                                    <span class="nav-label">Next <i class="fa fa-arrow-right"></i></span>
+                                    <span class="nav-title">{{ .Title }}</span>
+                                </a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </article>
+
+        </div>
+    </div>
+</div>
+
+{{- $related := first 3 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) -}}
+{{ if $related }}
+<section class="gap blog-recent-posts" style="background-color: #f9f9f9; padding-top: 60px;">
+    <div class="container">
+        <h3 class="mb-5" style="text-align: center; font-weight: 700;">Related Posts</h3>
+        <div class="row">
+            {{ range $related }}
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-blog-post" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px;">
+                    <a href="{{ .RelPermalink }}" style="display: block; overflow: hidden;">
+                        {{ with .Params.image }}
+                        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="w-100" style="height: 200px; object-fit: cover; transition: 0.3s;">
+                        {{ end }}
+                    </a>
+                    <div style="padding: 20px;">
+                        <span style="font-size: 0.85em; color: #888; display: block; margin-bottom: 5px;">
+                            <i class="fa-regular fa-clock"></i> {{ .Date.Format "Jan 2, 2006" }}
+                        </span>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 10px;">
+                            <a href="{{ .RelPermalink }}" style="color: #333; text-decoration: none; font-weight: 700;">{{ .Title }}</a>
+                        </h4>
+                        <a href="{{ .RelPermalink }}" style="color: #007bff; font-weight: 600; font-size: 0.9em; text-decoration: none;">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ end }}

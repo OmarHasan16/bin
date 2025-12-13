@@ -1,0 +1,43 @@
+{{ with .Site.Data.content.projects_carousel_two }}
+{{ if .enable }}
+
+<section class="case-studies gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="heading-boder">
+          <h2>{{ .title | safeHTML }}</h2>
+          <p>{{ .subtitle | safeHTML }}</p>
+          <a href="{{ .link }}" class="themebtu full">{{ .button }}</a>
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <div class="swiper-container studiesswiper">
+          <div class="swiper-wrapper">
+            {{ range first .numOfItems (where $.Site.RegularPages "Section" "portfolio") }}
+            <div class="swiper-slide">
+              <div class="case-studies-project">
+                <a href="{{ .Permalink }}" class="case-studies-project-img"><img alt="{{ .Title }}" src="{{ .Params.image | absURL }}"></a>
+                <h4>{{ .Title }}</h4>
+                <p>{{ .Params.short }}</p>
+                <a href="{{ .Permalink }}">{{ i18n "viewProject" }}</a>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-1"></div>
+    <div class="style-shapes-2">
+      <img alt="shap-4" src="/images/shap-b-2.png">
+    </div>
+    <div class="style-shapes-3"></div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

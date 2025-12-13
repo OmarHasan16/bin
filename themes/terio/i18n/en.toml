@@ -1,0 +1,135 @@
+[all]
+other = "All"
+
+[readMore]
+other = "Read more"
+
+[seeDetails]
+other = "see details"
+
+[by]
+other = "By"
+
+[yourName]
+other = "Your name *"
+
+[enterYourName]
+other = "Enter your full name"
+
+[yourEmail]
+other = "Email address *"
+
+[enterYourEmail]
+other = "Enter your email address"
+
+[yourEmailAddress]
+other = "your email address"
+
+[yourMessage]
+other = "Your message *"
+
+[enterYourMessage]
+other = "Enter your message here"
+
+[yourPhone]
+other = "Your Phone (optional)"
+
+[yourCompany]
+other = "Your Company *"
+
+[submit]
+other = "Submit"
+
+[sendMessage]
+other = "Send Message"
+
+[getInTouch]
+other = "Get in touch"
+
+[latestPosts]
+other = "Latest Posts"
+
+[relatedPosts]
+other = "Related Posts"
+
+[taxonomyPageList]
+other = "Latest Posts by"
+
+[readingTime]
+one = "1 min read"
+other = "{{ .Count }} mins read"
+
+[publishDate]
+other = "Publish Date"
+
+[author]
+other = "Author"
+
+[share]
+other = "Share"
+
+[shareOn]
+other = "Share on"
+
+[tags]
+other = "Tags"
+
+[comments]
+other = "Comments"
+
+[nextPost]
+other = "Next Post"
+
+[prevPost]
+other = "Previous Post"
+
+[nextProject]
+other = "Next Project"
+
+[prevProject]
+other = "Previous Project"
+
+[viewProject]
+other = "View Project"
+
+[launchSite]
+other = "Launch Site"
+
+[go]
+other = "Go"
+
+[next]
+other = "Next"
+
+[prev]
+other = "Previous"
+
+[successMessage]
+other = "Thanks, your message is sent successfully."
+
+[developedBy]
+other = "Developed By"
+
+[category]
+other = "Category"
+
+[search]
+other = "Search"
+
+[searchFor]
+other = "Search for:"
+
+[categories]
+other = "Categories"
+
+[errorNum]
+other = "404"
+
+[errorTitle]
+other = "Page Not Found"
+
+[errorText]
+other = "The page you’re looking for doesn’t exist or has been moved."
+
+[errorButton]
+other = "Go Back to Home"

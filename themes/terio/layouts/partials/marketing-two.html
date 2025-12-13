@@ -1,0 +1,38 @@
+{{ with .Site.Data.content.marketing_two }}
+{{ if .enable }}
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 ">
+        <div class="heading">
+          <h6>{{ .subtitle | safeHTML }}</h6>
+          <h2>{{ .title | safeHTML }}</h2>
+          <img alt="line" src="/images/headingline.png">
+        </div>
+        <div class="marketing two">
+          <p class="pt-3">{{ .description | safeHTML }}</p>
+        </div>
+        <div class="successful">
+           {{ range .numbers }}
+           <div class="d-flex">
+             <h3>{{ .value }}</h3>
+             <p>{{ .label }}</p>
+           </div>
+           {{ if eq .separator true }}
+           <div class="separator"></div>
+           {{ end }}
+           {{ end }}
+        </div>
+      </div>
+      <div class="offset-xl-1 col-lg-5">
+        <div class="graph">
+          <img alt="img" class="w-100" src="{{ .image | absURL }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

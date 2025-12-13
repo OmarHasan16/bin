@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WordPress on 10Corp | Global Web Services</title>
+    <link>http://localhost:1313/categories/wordpress/</link>
+    <description>Recent content in WordPress on 10Corp | Global Web Services</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Dec 2023 20:25:25 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is xmlrpc.php in WordPress and Why You Should Disable It</title>
+      <link>http://localhost:1313/blog/wordpress/what-is-xmlrpc-php-in-wordpress-and-why-you-should-disable-it/</link>
+      <pubDate>Thu, 28 Dec 2023 20:25:25 +0000</pubDate>
+      <guid>http://localhost:1313/blog/wordpress/what-is-xmlrpc-php-in-wordpress-and-why-you-should-disable-it/</guid>
+      <description>&lt;p&gt;XML-RPC (Remote Procedure Call using XML) is a protocol that enables communication between different systems over HTTP. In the context of WordPress, &lt;code&gt;xmlrpc.php&lt;/code&gt; is a file that facilitates XML-RPC communication for various purposes. Here’s a breakdown of its history, usage, and reasons why you might consider disabling it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

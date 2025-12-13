@@ -1,0 +1,106 @@
+<head>
+  {{ "" | safeHTML }}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+
+  <title>
+    {{ if .Params.seoTitle }}
+      {{ .Params.seoTitle }}
+    {{ else if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ .Title }} | {{ .Site.Title }}
+    {{ end }}
+  </title>
+
+  <meta name="description" content="{{ .Params.description | default .Site.Params.description | safeHTMLAttr }}">
+
+  {{ with .Params.keywords }}
+  <meta name="keywords" content="{{ delimit . ", " | safeHTMLAttr }}">
+  {{ end }}
+
+  <meta name="copyright" content="Web Services LLC">
+  <meta name="author" content="10Corp, webmaster@10corp.com">
+  <meta name="revisit-after" content="7 days">
+  <meta name="MobileOptimized" content="320">
+  
+  <meta name="generator" content="Hugo {{ hugo.Version }}">
+
+  <meta property="og:title" content="{{ .Params.seoTitle | default .Title }}">
+  <meta property="og:description" content="{{ .Params.description | default .Site.Params.description | safeHTMLAttr }}">
+  <meta property="og:url" content="{{ .Permalink | safeHTMLAttr }}">
+  <meta property="og:type" content="website">
+  {{ with .Params.image }}<meta property="og:image" content="{{ . | safeHTMLAttr }}">{{ end }}
+  <meta property="og:site_name" content="{{ .Site.Params.organization | safeHTMLAttr }}">
+  
+  <meta property="og:locale" content="en-US">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="es_ES">
+
+  <meta name="twitter:title" content="{{ .Params.seoTitle | default .Title }}">
+  <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description | safeHTMLAttr }}">
+  <meta name="twitter:image" content="{{ .Params.image | default .Site.Params.defaultImage | safeHTMLAttr }}">
+
+  <meta name="theme-color" content="#1a202c">
+  <meta name="robots" content="{{ .Params.robots | default "index, follow" | safeHTMLAttr }}">
+
+  <link rel="canonical" href="{{ .Permalink | safeHTMLAttr }}">
+  <link rel="alternate" hreflang="en-US" href="{{ .Permalink | safeHTMLAttr }}">
+
+  {{ "" | safeHTML }}
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" type="text/css" media="all" />
+
+  {{ "" | safeHTML }}
+  <link rel="stylesheet" href="{{ "plugins/bootstrap/bootstrap.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/font-awesome/css/all.min.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/swiper/swiper.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/fancybox/jquery.fancybox.min.css" | absURL }}" />
+
+  {{ "" | safeHTML }}
+  {{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/images/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/images/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="10Corp website"/>
+  <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/images/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/images/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/images/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/images/mstile-310x310.png" />
+
+  {{ "" | safeHTML }}
+  <link rel="icon" href="{{ "images/logo-icon.png" | absURL }}">
+
+  {{ if site.Params.googleAnalytics }}
+  {{ "" | safeHTML }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.Params.googleAnalytics }}');
+  </script>
+  {{ end }}
+
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
+  {{ "" | safeHTML }}
+  {{ partial "schema.html" . }}
+</head>

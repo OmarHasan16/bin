@@ -1,0 +1,160 @@
+{{ define "main" }}
+{{ $dateFormat := .Site.Params.dateFormat }}
+{{ $title := .Title }}
+
+<section>
+	<div class="container">
+	  <div class="title-blog">
+		<h2>{{ .Title }}</h2>
+		{{ if .Params.categories }}
+		{{ range (.GetTerms "categories") }}
+		<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+		{{ end }}
+		{{ end }}
+	  </div>
+	  <div class="row">
+		<div class="col-xl-8">
+		  <div class="blog-item">
+			{{ with .Params.fullImage }}
+			<figure><img alt="{{ $title }}" class="w-100" src="{{ . | absURL }}"></figure>
+			{{ else }}
+			<figure><img alt="{{ $title }}" class="w-100" src="{{ .Params.featureImage | absURL }}"></figure>
+			{{ end }}
+
+			<div class="post-content">
+				{{ .Content }}
+			</div>
+		  </div>
+
+		  {{ if or .NextInSection .PrevInSection }}
+		  <div class="next-previous-page two row">
+			<div class="container">
+				<div class="next-previous">
+				{{ if .PrevInSection }}
+				<div class="prev">
+					<a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+					<polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+					405.606,308.713 476.213,238.106 "/>
+					</svg>
+					{{ i18n "prevPost" }}</a>
+				</div>
+				{{ end }}
+				{{ if .NextInSection }}
+				<div class="next">
+					<a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}">
+					{{ i18n "nextPost" }}
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+					<polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+					405.606,308.713 476.213,238.106 "/>
+					</svg>
+					</a>
+				</div>
+				{{ end }}
+				</div>
+			</div>
+		  </div>
+		  {{ end }}
+
+		  {{ if .Site.Params.disqusComments }}
+		  <div class="comments-post section pt-5 no-bottom" data-animate="active">
+			<div class="section__comments">
+				<div class="m-titles">
+					<h5 class="mb-5">{{ i18n "comments" }}</h5>
+				</div>
+				<div id="disqus_thread"></div>
+				<script>
+					var disqus_config = function () {
+						this.page.url = "{{ .Permalink | absURL }}";  /* Replace PAGE_URL with your page's canonical URL variable */
+						this.page.identifier = "{{ .File.UniqueID }}"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+					};
+					(function() { /* DON'T EDIT BELOW THIS LINE */
+						var d = document, s = d.createElement('script');
+						s.src = 'https://{{ .Site.Params.disqusComments }}.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</div>
+		  </div>
+		  {{ end }}
+		</div>
+		<div class="col-xl-4 pl-60">
+		  <ul class="sidebar">
+			<li>
+			  <h4>{{ i18n "author" }} : </h4>
+			  <span>{{ .Site.Params.authorName }}</span>
+			</li>
+			<li>
+			  <h4>{{ i18n "publishDate" }} :</h4>
+			  <span>{{ .PublishDate.Format $dateFormat }}</span>
+			</li>
+			<li>
+			  <h4>{{ i18n "category" }} :</h4>
+			  {{ if .Params.categories }}
+			  {{ range $index, $elem := (.GetTerms "categories") }}
+			  <a href="{{ $elem.Permalink }}">{{ if $index }}, {{ end }}<span>{{ $elem.LinkTitle }}</span></a>
+			  {{ end }}
+			  {{ end }}
+			</li>
+			{{ if .Params.tags }}
+			<li>
+				<h4>{{ i18n "tags" }} :</h4>
+				{{ if .Params.categories }}
+				{{ range $index, $elem := (.GetTerms "tags") }}
+				<a href="{{ $elem.Permalink }}">{{ if $index }}, {{ end }}<span>{{ $elem.LinkTitle }}</span></a>
+				{{ end }}
+				{{ end }}
+			</li>
+			{{ end }}
+			<li>
+			  <h4>{{ i18n "share" }} :</h4>
+			  <ul class="brandicon share-post social-share" data-title="{{ .Title }}" data-url="{{ .Permalink | absURL }}">
+				<li><a href="#" class="share-btn share-btn-facebook share-btn-1" title="{{ i18n "shareOn" }} Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-twitter share-btn-2" title="{{ i18n "shareOn" }} Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-reddit share-btn-3" title="{{ i18n "shareOn" }} Reddit"><i class="fa-brands fa-reddit"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-pinterest share-btn-4" title="{{ i18n "shareOn" }} Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-linkedin share-btn-5" title="{{ i18n "shareOn" }} Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</div>
+
+		</div>
+		
+	  </div>
+</section>
+
+{{- range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) -}}
+    {{- $.Scratch.Set "has_related" true -}}
+{{- end -}}
+
+{{ if $.Scratch.Get "has_related" }}
+
+<section class="gap blog-recent-posts">
+	<div class="container">
+	  <h4 class="mb-5">{{ i18n "relatedPosts" }}</h4>
+	  <div class="row">
+		{{- $num_to_show := .Site.Params.relatedPostsLimit | default 4 -}}
+		{{ range first $num_to_show (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="latest-blog-post">
+			<a href="{{ .RelPermalink }}"><img alt="{{ .Title }}" class="w-100" src="{{ .Params.featureImage | absURL }}"></a>
+			<a href="{{ .RelPermalink }}"><i class="fa-regular fa-clock"></i><span>{{ .PublishDate.Format $dateFormat }}</span></a>
+			<a href="{{ .RelPermalink }}">
+			  <h4>{{ .Title }}</h4>
+			</a>
+			<span>{{ i18n "by" }} {{ .Site.Params.authorName }} | {{ with .Params.categories }}{{ delimit . " , "}}{{ end }}</span>
+		  </div>
+		</div>
+		{{ end }}
+	  </div>
+	</div>
+</section>
+
+{{ end }}
+
+{{ end }}

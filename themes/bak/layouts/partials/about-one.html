@@ -1,0 +1,38 @@
+{{ with .Site.Data.content.about_one }}
+{{ if .enable }}
+
+<section class="things-differently gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-7">
+        <div class="heading">
+          <h6>{{ .subtitle | safeHTML }}</h6>
+          <h2>{{ .title | safeHTML }}</h2>
+          <img alt="line" src="/images/headingline.png">
+          <img alt="dots" class="dots" src="/images/dots.png">
+        </div>
+      </div>
+      <div class="col-xl-5">
+        <div class="signature">
+          {{ .text | safeHTML }}
+          <div class="ceo">
+            <div>
+              <img alt="img" src="{{ .signature | absURL }}">
+              <span>{{ .name }}</span>
+            </div>
+            <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hoverstyle">
+  <figure>
+    <img alt="img" class="w-100" src="{{ .image | absURL }}">
+  </figure>
+</div>
+
+{{ end }}
+{{ end }}

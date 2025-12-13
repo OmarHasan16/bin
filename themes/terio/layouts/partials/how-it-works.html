@@ -1,0 +1,28 @@
+{{ with .Site.Data.content.how_it_works }}
+{{ if .enable }}
+
+<section class="how-it-works gap no-top">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ .subtitle | safeHTML }}</h6>
+      <h2>{{ .title | safeHTML }}</h2>
+      <img alt="line" src="/images/headingline.png">
+    </div>
+    <div class="row pt-4">
+      {{ range .items }}
+      <div class="col-xl-4 col-lg-6">
+        <div class="strategic">
+          <h2>{{ .num }}</h2>
+          <div class="pl-80">
+            <h4>{{ .title | safeHTML }}</h4>
+            <p>{{ .text | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

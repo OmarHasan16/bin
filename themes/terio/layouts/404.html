@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<section class="error-page" style="background-image: url(assets/img/background.jpg)">
+	<div class="container">
+	  <div class="page-not">
+		<h2>{{ i18n "errorNum" }}</h2>
+		<div>
+		  <h3>{{ i18n "errorTitle" }}</h3>
+		  <h5>{{ i18n "errorText" }}</h5>
+		</div>
+	  </div>
+	  <a href="{{ .Site.BaseURL }}" class="themebtu mt-5">{{ i18n "errorButton" }}</a>
+	</div>
+</section>
+
+{{ end }}

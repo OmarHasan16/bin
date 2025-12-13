@@ -1,0 +1,45 @@
+{{ with .Site.Data.content.benefits }}
+{{ if .enable }}
+
+<section class="makes-us-different" style="background-color: #f2edf5;">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ .subtitle | safeHTML }}</h6>
+      <h2>{{ .title | safeHTML }}</h2>
+      <img alt="line" src="/images/headingline.png">
+    </div>
+    <div class="row">
+      {{ range .items }}
+      <div class="col-xl-4 col-lg-6 ">
+        <div class="makes-us-different-text">
+            <img src="{{ .icon | absURL }}" alt="icon">
+            <h4>{{ .title | safeHTML }}</h4>
+            <p>{{ .description | safeHTML }}</p>
+            <a href="{{ .link }}">{{ .button }}</a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ if eq .numbers_enable true }}
+    <div class="counter-style gap">
+      <div class="row">
+        {{ range .numbers }}
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="counter-text">
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="counter" data-target="{{ .value }}"></div>
+              {{ if eq .plus true }}<h6>+</h6>{{ end }}
+            </div>
+             <div class="boder"></div>
+            <span>{{ .label }}</span>
+           </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

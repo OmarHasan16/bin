@@ -1,0 +1,39 @@
+{{ with .Site.Data.content.testimonial_three }}
+{{ if .enable }}
+
+<section class="satisfied-clients gap">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-4">
+        <div class="heading-boder">
+          <h2>{{ .title | safeHTML }}</h2>
+          <p class="pb-4">{{ .subtitle | safeHTML }}</p>
+          <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6">
+        {{ range .items_col1 }}
+        <div class="client-review mb-xl-5">
+          <i class="fa-solid fa-quote-left"></i>
+          <h4>{{ .title | safeHTML }}</h4>
+          <p>“{{ .text | safeHTML }}”</p>
+          <span>{{ .name | safeHTML }}</span>
+        </div>
+        {{ end }}
+      </div>
+      <div class="col-xl-4 col-lg-6">
+        {{ range .items_col2 }}
+        <div class="client-review mb-xl-5">
+          <i class="fa-solid fa-quote-left"></i>
+          <h4>{{ .title | safeHTML }}</h4>
+          <p>“{{ .text | safeHTML }}”</p>
+          <span>{{ .name | safeHTML }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

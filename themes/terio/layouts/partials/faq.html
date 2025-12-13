@@ -1,0 +1,37 @@
+{{ with .Site.Data.content.faq }}
+{{ if .enable }}
+
+<section class="gap">
+  <div class="container">
+    <div class="heading">
+      <h6>{{ .subtitle | safeHTML }}</h6>
+      <h2>{{ .title | safeHTML }}</h2>
+      <img alt="line" src="/images/headingline.png">
+    </div>
+    <div class="row">
+      {{ range .columns }}
+      <div class="col-lg-6">
+        <div class="questions me-lg-4">
+          <h4>{{ .heading | safeHTML }}</h4>
+          <div class="accordion">
+            {{ range .items }}
+            <div class="accordion-item">
+                <a href="#" class="heading">
+                    <div class="icon"></div>
+                    <div class="title">{{ .title | safeHTML }}</div>
+                </a>
+                <div class="content">
+                  {{ .text | safeHTML }}
+                </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

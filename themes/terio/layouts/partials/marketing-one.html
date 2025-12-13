@@ -1,0 +1,31 @@
+{{ with .Site.Data.content.marketing_one }}
+{{ if .enable }}
+
+<section class="gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="graph">
+          <img alt="img" src="{{ .image | absURL }}">
+        </div>
+      </div>
+      <div class="col-lg-6 p-sm-0">
+        <div class="heading">
+          <h6>{{ .subtitle | safeHTML }}</h6>
+          <h2>{{ .title | safeHTML }}</h2>
+          <img alt="line" src="/images/headingline.png">
+        </div>
+        <div class="marketing">
+          <h4>
+            {{ .intro | safeHTML }}
+          </h4>
+          <p>{{ .description | safeHTML }}</p>
+          <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

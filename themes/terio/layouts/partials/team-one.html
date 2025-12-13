@@ -1,0 +1,49 @@
+{{ with .Site.Data.content.team_one }}
+{{ if .enable }}
+
+<section class="gap team-section">
+  <div class="container">
+    <div class="heading-boder two">
+      <h2>{{ .title | safeHTML }}</h2>
+      <p>{{ .subtitle | safeHTML }}</p>
+    </div>
+    <div class="row">
+      {{ range .items }}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+        <div class="team-member">
+          <img class="w-100" alt="{{ .name }}" src="{{ .image | absURL }}">
+          <div class="team-member-text">
+            <h6>{{ .name }}</h6>
+            <p>{{ .role }}</p>
+            <ul class="brandicon">
+              {{ range .social }}
+              <li><a href="{{ .link }}" target="_blank" rel="nofollow" title="{{ .title }}"><i class="{{ .icon }}"></i></a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="btugap">
+      <a href="{{ .link }}" class="themebtu">{{ .button }}</a>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-4">
+      <img alt="dots1" src="/images/dots1.png">
+    </div>
+    <div class="style-shapes-5">
+      <img alt="dots1" src="/images/shap-2.png">
+    </div>
+    <div class="style-shapes-6">
+      <img alt="dots1" src="/images/shap-2.png">
+    </div>
+    <div class="style-shapes-7">
+      <img alt="dots1" src="/images/shap-5.png">
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

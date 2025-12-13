@@ -1,0 +1,23 @@
+{{ with .Site.Data.content.numbers }}
+{{ if .enable }}
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="row">
+      {{ range .items }}
+      <div class="col-xl-4 col-lg-6 ">
+        <div class="strategic-sercives">
+          <h2>{{ .num }}</h2>
+          <div>
+            <h4>{{ .title | safeHTML }}</h4>
+            <p>{{ .text | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

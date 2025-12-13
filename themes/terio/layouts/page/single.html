@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+{{ $intro := .Params.intro }}
+
+{{ if $intro }}
+<section class="splash-area-section" style="background-image: url('{{ site.Params.introBackground | absURL }}')">
+	<div class="container">
+	  <div class="splash-area">
+		<h2>{{ .Params.intro_title | safeHTML }}</h2>
+		<span>{{ .Params.intro_subtitle | safeHTML }}</span>
+	  </div>
+	</div>
+</section>
+{{ end }}
+
+{{ $builder := .Params.builder }}
+{{ $page := . }}
+
+{{ if $builder }}
+
+{{ range $section := .Params.sections }}
+
+{{ $partialPath := $section | printf "partials/%s.html" }}
+{{ if templates.Exists ( $partialPath ) }}
+  {{ partial $partialPath $page }}
+{{ end }}
+
+{{ end }}
+
+{{ else }}
+
+<section class="splash-area-section" style="background-image: url('{{ site.Params.introBackground | absURL }}')">
+	<div class="container">
+		<div class="splash-area">
+			<h2>{{ .Title }}</h2>
+		</div>
+	</div>
+</section>
+
+<div class="section section-inner gap">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				<div class="post-content">
+					{{ .Content }}
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ end }}
+
+{{ end }}

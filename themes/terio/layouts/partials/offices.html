@@ -1,0 +1,51 @@
+{{ with .Site.Data.content.offices }}
+{{ if .enable }}
+
+<section class="offices gap" style="background-color:#f3f8fb;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="heading">
+          <h2>{{ .title | safeHTML }}</h2>
+          <p>{{ .subtitle | safeHTML }}</p>
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <div class="swiper-container studiesswiper">
+          <div class="swiper-wrapper">
+            {{ range .items }}
+            <div class="swiper-slide">
+              <div class="view-map hoverstyle">
+                <figure>
+                    <img alt="img" class="w-100" src="{{ .image | absURL }}">
+                </figure>
+                <div class="view-map-data">
+                  <i class="fa-solid fa-user"></i>
+                  <h5>{{ .title | safeHTML }}</h5>
+                  <p>{{ .text | safeHTML }}</p>
+                  <a href="{{ .link }}" target="_blank">{{ .button }}</a>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tp-hero__shapes">
+    <div class="style-shapes-5">
+      <img alt="dots1" src="/images/shap-2.png">
+    </div>
+    <div class="style-shapes-6">
+      <img alt="dots1" src="/images/shap-2.png">
+    </div>
+    <div class="style-shapes-7">
+      <img alt="dots1" src="/images/shap-5.png">
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}
