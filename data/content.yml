@@ -920,6 +920,21 @@ pricing:
   title: "Ready to<br> get started"
   subtitle: "Plans & Pricing"
   items:
+    - title: "Basic"
+      price: "1999"
+      price_before: "$"
+      price_lower: ",99"
+      description: "Perfect for getting started. Essential features to launch your online presence."
+      list: 
+        - "Website builder"
+        - "5 Autosave drafts/page"
+        - "Email support"
+        - "Limit 5 pages"
+        - "Basic Support"
+
+      button: "Get Started"
+      link: "/contact/"
+
     - title: "Standard"
       price: "2999"
       price_before: "$"
@@ -981,6 +996,21 @@ hosting:
   title: "Ready to<br> get started"
   subtitle: "Plans & Pricing"
   items:
+    - title: "Basic"
+      price: "4"
+      price_before: "$"
+      price_lower: ",99"
+      description: "Perfect for getting started. Essential hosting features for small websites."
+      list:
+        - "5 GB Storage"
+        - "Basic Email accounts"
+        - "Email support"
+        - "1 SSL Certificate"
+        - "Basic Backup"
+
+      button: "Get Started"
+      link: "/contact/"
+
     - title: "Standard"
       price: "9"
       price_before: "$"

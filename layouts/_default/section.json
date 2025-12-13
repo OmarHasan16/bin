@@ -1,0 +1,16 @@
+{{- define "main" -}}
+{
+  "section": "{{ .Title }}",
+  "url": "{{ .Permalink }}",
+  "pages": [
+    {{- range $index, $page := .Pages }}
+      {{- if gt $index 0 }},{{ end }}
+    {
+      "title": "{{ $page.Title }}",
+      "url": "{{ $page.Permalink }}",
+      "date": "{{ $page.Date.Format "2006-01-02" }}"
+    }
+    {{- end }}
+  ]
+}
+{{- end -}}

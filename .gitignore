@@ -1,0 +1,14 @@
+# Hugo default
+public/
+resources/_gen/
+.hugo_build.lock
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Executables 
+*.exe
+*.dll
+*.so
+bin/

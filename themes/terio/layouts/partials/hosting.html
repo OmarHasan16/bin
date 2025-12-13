@@ -1,4 +1,4 @@
-{{ with .Site.Data.content.pricing }}
+{{ with .Site.Data.content.hosting }}
 {{ if .enable }}
 
 <section class="plans-pricing gap" style="background-color :#f3f8fb">
@@ -10,7 +10,7 @@
     </div>
     <div class="row">
       {{ range .items }}
-      <div class="col-xl-4 col-lg-6">
+      <div class="col-lg-3 col-md-6">
         <div class="Pricing-style">
           <div class="standard">
             <h5>{{ .title }}</h5>
