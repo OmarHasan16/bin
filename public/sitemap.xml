@@ -62,11 +62,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/legal/do-not%20sell-my-personal-information/</loc>
-    <lastmod>2024-01-08T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/legal/domain-name-transfer-agreement/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -133,6 +128,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/legal/change-of-registrant-agreement/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/legal/do-not-sell-my-personal-information/</loc>
     <lastmod>2023-12-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -330,10 +330,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/services/contact/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/legal/dispute-on-transfer-away-form/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -343,10 +339,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/email/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/services/index-2/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

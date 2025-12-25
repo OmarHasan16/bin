@@ -28,20 +28,43 @@
   
   <meta name="generator" content="Hugo {{ hugo.Version }}">
 
+  {{ "<!-- Open Graph Meta Tags -->" | safeHTML }}
   <meta property="og:title" content="{{ .Params.seoTitle | default .Title }}">
   <meta property="og:description" content="{{ .Params.description | default .Site.Params.description | safeHTMLAttr }}">
   <meta property="og:url" content="{{ .Permalink | safeHTMLAttr }}">
-  <meta property="og:type" content="website">
-  {{ with .Params.image }}<meta property="og:image" content="{{ . | safeHTMLAttr }}">{{ end }}
+  <meta property="og:type" content="{{ if eq .Type "blog" }}article{{ else }}website{{ end }}">
   <meta property="og:site_name" content="{{ .Site.Params.organization | safeHTMLAttr }}">
-  
-  <meta property="og:locale" content="en-US">
+  {{ with .Params.image }}
+  <meta property="og:image" content="{{ . | absURL | safeHTMLAttr }}">
+  <meta property="og:image:secure_url" content="{{ . | absURL | safeHTMLAttr }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ $.Title }}">
+  {{ end }}
+  <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:locale:alternate" content="es_ES">
+  
+  {{ "<!-- Article-specific Open Graph Tags -->" | safeHTML }}
+  {{ if eq .Type "blog" }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ with .Params.author }}<meta property="article:author" content="{{ . }}">{{ end }}
+  {{ with .Params.keywords }}
+  {{ range . }}<meta property="article:tag" content="{{ . }}">{{ end }}
+  {{ end }}
+  {{ end }}
 
+  {{ "<!-- Twitter Card Meta Tags -->" | safeHTML }}
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ .Params.seoTitle | default .Title }}">
   <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description | safeHTMLAttr }}">
-  <meta name="twitter:image" content="{{ .Params.image | default .Site.Params.defaultImage | safeHTMLAttr }}">
+  {{ with .Params.image }}
+  <meta name="twitter:image" content="{{ . | absURL | safeHTMLAttr }}">
+  <meta name="twitter:image:alt" content="{{ $.Title }}">
+  {{ end }}
+  {{ with .Site.Params.socialTwitter }}<meta name="twitter:site" content="@10corp">{{ end }}
+  {{ with .Params.author }}<meta name="twitter:creator" content="@10corp">{{ end }}
 
   <meta name="theme-color" content="#1a202c">
   <meta name="robots" content="{{ .Params.robots | default "index, follow" | safeHTMLAttr }}">

@@ -5,7 +5,7 @@
     <link>http://localhost:1313/contact/</link>
     <description>Recent content in Contact Us on 10Corp | Global Web Services</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>en-us</language>
     <atom:link href="http://localhost:1313/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

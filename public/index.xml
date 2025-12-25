@@ -5,7 +5,7 @@
     <link>http://localhost:1313/</link>
     <description>Recent content in Home on 10Corp | Global Web Services</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Wed, 03 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/legal/privacy-policy/</link>
       <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/legal/privacy-policy/</guid>
-      <description>&lt;div class=&#34;alert-box&#34;&gt;&#xA;  &lt;div&gt;&#xA;    &lt;strong&gt;🔒 Commitment to Privacy&lt;/strong&gt;&#xA;    10Corp empowers entrepreneurs everywhere. We believe privacy is a fundamental right. This policy outlines exactly how &lt;strong&gt;Web Services LLC&lt;/strong&gt; (doing business as &lt;strong&gt;10Corp&lt;/strong&gt;) collects, uses, and protects your data.&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;As described below:&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;alert-box&#34;&gt;&#xD;&#xA;  &lt;div&gt;&#xD;&#xA;    &lt;strong&gt;🔒 Commitment to Privacy&lt;/strong&gt;&#xD;&#xA;    10Corp empowers entrepreneurs everywhere. We believe privacy is a fundamental right. This policy outlines exactly how &lt;strong&gt;Web Services LLC&lt;/strong&gt; (doing business as &lt;strong&gt;10Corp&lt;/strong&gt;) collects, uses, and protects your data.&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;As described below:&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Terms of Use</title>
@@ -76,14 +76,7 @@
       <link>http://localhost:1313/legal/additional-renewal-terms/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/legal/additional-renewal-terms/</guid>
-      <description>&lt;h1 id=&#34;10corp---additional-terms-for-renewals&#34;&gt;10Corp - Additional Terms for Renewals&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Renewal Fees&lt;/strong&gt;&#xA;Renewal rates do not include fees from Private Registration&amp;hellip;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;alert-box warning&#34;&gt;&#xA;    &lt;strong&gt;⚠️ Important Fee Notice:&lt;/strong&gt; &#xA;    If you do not renew your domain(s) during the 12-day Renewal Grace Period, you will incur a fee of $80.00 in addition to the renewal fee.&#xA;&lt;/div&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Payment Information Updates and Failed Billing Processes&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Do Not Sell My Personal Information</title>
-      <link>http://localhost:1313/legal/do-not%20sell-my-personal-information/</link>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/legal/do-not%20sell-my-personal-information/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Do Not Sell My Personal Information&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;california-privacy-notice&#34;&gt;&lt;strong&gt;California Privacy Notice&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;This &lt;strong&gt;Privacy Notice Addendum for California Residents&lt;/strong&gt; (&amp;ldquo;CA Privacy Notice&amp;rdquo;) supplements the Web Services LLC, a New Mexico limited liability company (&amp;quot;&lt;strong&gt;10Corp&lt;/strong&gt;&amp;quot;) Privacy Notice** and applies solely to residents of &lt;strong&gt;California&lt;/strong&gt;, including job applicants. If you receive a job offer, additional privacy notices and requests for information may apply.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;10corp---additional-terms-for-renewals&#34;&gt;10Corp - Additional Terms for Renewals&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Renewal Fees&lt;/strong&gt;&#xA;Renewal rates do not include fees from Private Registration&amp;hellip;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;alert-box warning&#34;&gt;&#xD;&#xA;    &lt;strong&gt;⚠️ Important Fee Notice:&lt;/strong&gt; &#xD;&#xA;    If you do not renew your domain(s) during the 12-day Renewal Grace Period, you will incur a fee of $80.00 in addition to the renewal fee.&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Payment Information Updates and Failed Billing Processes&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Domain Name Transfer Agreement</title>
@@ -154,6 +147,13 @@
       <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/legal/change-of-registrant-agreement/</guid>
       <description>&lt;h1 id=&#34;10corp-change-of-registrant-agreement&#34;&gt;10Corp Change of Registrant Agreement&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Last Revised: December 10, 2023&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-overview&#34;&gt;1. Overview&lt;/h2&gt;&#xA;&lt;p&gt;This Domain Name Change of Registrant Agreement (“Agreement”) is entered into between 10Corp and you upon electronic acceptance. It governs the transfer of a registered domain name from a current registrant (“Prior Registrant”) to a new registrant (“New Registrant”).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Do Not Sell My Personal Information</title>
+      <link>http://localhost:1313/legal/do-not-sell-my-personal-information/</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/legal/do-not-sell-my-personal-information/</guid>
+      <description>&lt;h1 id=&#34;addendum-for-california-users&#34;&gt;Addendum for California Users&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Effective Date: December 10, 2023&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;This Privacy Notice Addendum for California Residents (the “CA Privacy Notice”) supplements the information in the &lt;a href=&#34;https://www.10corp.com/privacy-center&#34;&gt;Web Services LLC. Privacy Notice&lt;/a&gt; and applies solely to California residents, including job applicants (“consumers” or “you”).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Domain Name Registration Agreement | 10Corp</title>
@@ -331,13 +331,6 @@
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Contact Us</title>
-      <link>http://localhost:1313/services/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/contact/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Dispute On Transfer Away Form</title>
       <link>http://localhost:1313/legal/dispute-on-transfer-away-form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -356,13 +349,6 @@
       <link>http://localhost:1313/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/email/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Home 2</title>
-      <link>http://localhost:1313/services/index-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/index-2/</guid>
       <description></description>
     </item>
     <item>
@@ -385,6 +371,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/security/</guid>
       <description>&lt;h1 id=&#34;sectigo-ssl-certificates&#34;&gt;Sectigo SSL Certificates&lt;/h1&gt;&#xA;&lt;h2 id=&#34;secure-your-website-with-trust-and-encryption&#34;&gt;Secure Your Website with Trust and Encryption&lt;/h2&gt;&#xA;&lt;h3 id=&#34;plans--pricing&#34;&gt;Plans &amp;amp; Pricing&lt;/h3&gt;&#xA;&lt;h4 id=&#34;positive-ssl-for-small-businesses--personal-websites&#34;&gt;Positive SSL (For Small Businesses &amp;amp; Personal Websites)&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;$7.99/year ($0.66/mo) | Renews at $19.99/year ($1.66/mo)&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Domain Validation&lt;/li&gt;&#xA;&lt;li&gt;Secures 1 Subdomain&lt;/li&gt;&#xA;&lt;li&gt;SHA2 &amp;amp; ECC 128/256-bit Encryption&lt;/li&gt;&#xA;&lt;li&gt;$10,000 Warranty&lt;/li&gt;&#xA;&lt;li&gt;Issued Within 2 Days&lt;/li&gt;&#xA;&lt;li&gt;Includes TrustLogo &amp;amp; 30-Day Money-Back Guarantee&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;comodo-ssl-for-growing-businesses--ecommerce-sites&#34;&gt;Comodo SSL (For Growing Businesses &amp;amp; eCommerce Sites)&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;$39.99/year ($3.33/mo) | Renews at $39.99/year ($3.33/mo)&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Domain Validation&lt;/li&gt;&#xA;&lt;li&gt;Secures 1 Subdomain&lt;/li&gt;&#xA;&lt;li&gt;SHA2 &amp;amp; ECC 128/256-bit Encryption&lt;/li&gt;&#xA;&lt;li&gt;$250,000 Warranty&lt;/li&gt;&#xA;&lt;li&gt;Issued Within 2 Days&lt;/li&gt;&#xA;&lt;li&gt;Includes TrustLogo &amp;amp; 30-Day Money-Back Guarantee&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;wildcard-ssl-for-websites-with-multiple-subdomains&#34;&gt;Wildcard SSL (For Websites with Multiple Subdomains)&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;$59.99/year ($4.99/mo) | Renews at $59.99/year ($4.99/mo)&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Domain Validation&lt;/li&gt;&#xA;&lt;li&gt;Secures Unlimited Subdomains&lt;/li&gt;&#xA;&lt;li&gt;SHA2 &amp;amp; ECC 128/256-bit Encryption&lt;/li&gt;&#xA;&lt;li&gt;$10,000 Warranty&lt;/li&gt;&#xA;&lt;li&gt;Issued Within 2 Days&lt;/li&gt;&#xA;&lt;li&gt;Includes TrustLogo &amp;amp; 30-Day Money-Back Guarantee&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;ev-ssl-for-enterprises--high-security-websites&#34;&gt;EV SSL (For Enterprises &amp;amp; High-Security Websites)&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;$99.99/2 years ($8.33/mo) | Renews at $169.99/2 years ($14.16/mo)&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Enterprise Validation&lt;/li&gt;&#xA;&lt;li&gt;Secures 1 Subdomain&lt;/li&gt;&#xA;&lt;li&gt;SHA2 &amp;amp; ECC 128/256-bit Encryption&lt;/li&gt;&#xA;&lt;li&gt;$1,750,000 Warranty&lt;/li&gt;&#xA;&lt;li&gt;Issued Within 7 Days&lt;/li&gt;&#xA;&lt;li&gt;Includes TrustLogo &amp;amp; 30-Day Money-Back Guarantee&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-choose-sectigo-ssl-certificates&#34;&gt;Why Choose Sectigo SSL Certificates?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;Guaranteed Security&lt;/strong&gt; – Protect your website 24/7.&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;Boost Credibility&lt;/strong&gt; – Gain customer trust with a secure website.&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;Strongest Encryption&lt;/strong&gt; – Military-grade SHA2 &amp;amp; ECC 128/256-bit encryption.&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;TrustLogo Site Seal&lt;/strong&gt; – Display a badge of credibility.&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;SEO Advantage&lt;/strong&gt; – Secure websites rank higher on Google.&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;Extended Validation (EV SSL)&lt;/strong&gt; – Displays your company name in the address bar.&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;Cross-Browser Support&lt;/strong&gt; – Works with all major web browsers.&lt;/li&gt;&#xA;&lt;li&gt;✅ &lt;strong&gt;30-Day Money-Back Guarantee&lt;/strong&gt; – Risk-free SSL purchase.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-are-ssl-certificates-necessary&#34;&gt;Why Are SSL Certificates Necessary?&lt;/h3&gt;&#xA;&lt;h4 id=&#34;1-encrypts-sensitive-information&#34;&gt;1. Encrypts Sensitive Information&lt;/h4&gt;&#xA;&lt;p&gt;SSL encrypts customer data, such as passwords and payment details, ensuring security and preventing unauthorized access.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Services</title>
+      <link>http://localhost:1313/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/</guid>
+      <description></description>
     </item>
     <item>
       <title>Team</title>

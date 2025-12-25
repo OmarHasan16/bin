@@ -1,9 +1,0 @@
-{{ with .Site.Data.content.map }}
-{{ if .enable }}
-
-<div class="map">
-  {{ .map_iframe | markdownify }}
-</div>
-
-{{ end }}
-{{ end }}

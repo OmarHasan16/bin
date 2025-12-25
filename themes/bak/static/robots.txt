@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /admin/
-Disallow: /cgi-bin/
-Sitemap: https://www.10corp.com/sitemap.xml

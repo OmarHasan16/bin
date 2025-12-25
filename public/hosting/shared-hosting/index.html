@@ -24,22 +24,29 @@
   <meta name="revisit-after" content="7 days">
   <meta name="MobileOptimized" content="320">
   
-  <meta name="generator" content="Hugo 0.152.2">
+  <meta name="generator" content="Hugo 0.153.2">
 
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Affordable Shared Web Hosting | Fast, Secure &amp; Reliable | 10Corp">
   <meta property="og:description" content="Launch your website with 10Corp&#39;s affordable Shared Web Hosting. Enjoy blazing-fast SSD storage, free SSL certificates, cPanel access, and 99.9% uptime reliability. Perfect for small businesses and personal blogs.">
   <meta property="og:url" content="http://localhost:1313/hosting/shared-hosting/">
   <meta property="og:type" content="website">
-  
   <meta property="og:site_name" content="10Corp">
   
-  <meta property="og:locale" content="en-US">
+  <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:locale:alternate" content="es_ES">
+  
+  <!-- Article-specific Open Graph Tags -->
+  
 
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Affordable Shared Web Hosting | Fast, Secure &amp; Reliable | 10Corp">
   <meta name="twitter:description" content="Launch your website with 10Corp&#39;s affordable Shared Web Hosting. Enjoy blazing-fast SSD storage, free SSL certificates, cPanel access, and 99.9% uptime reliability. Perfect for small businesses and personal blogs.">
-  <meta name="twitter:image" content="">
+  
+  <meta name="twitter:site" content="@10corp">
+  
 
   <meta name="theme-color" content="#1a202c">
   <meta name="robots" content="index, follow">
@@ -96,39 +103,28 @@
   
 
   
-  
+  <!-- Article/BlogPosting Schema -->
 
     
 
 
-
+<!-- Organization & LocalBusiness Schema -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
     "name": "10Corp",
+    "alternateName": "10Corp Web Design Company",
     "url": "http:\/\/localhost:1313\/",
-    "logo": "http:\/\/localhost:1313\/images\/logo.png",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "http:\/\/localhost:1313\/images\/logo.png",
+        "width": 250,
+        "height": 60
+    },
+    "description": "Leading web design company specializing in custom websites, eCommerce solutions, hosting, domains, and digital marketing services.",
     "telephone": "\u002b17622333344",
     "email": "info@10corp.com",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2709 N Hayden Island Dr. STE 520328",
-        "addressLocality": "Portland",
-        "addressRegion": "Oregon",
-        "postalCode": "97217",
-        "addressCountry": "US"
-    }
-}
-</script>
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "10Corp",
-    "image": "http:\/\/localhost:1313\/images\/logo.png",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "2709 N Hayden Island Dr. STE 520328",
@@ -137,14 +133,114 @@
         "postalCode": "97217",
         "addressCountry": "US"
     },
-    "telephone": "\u002b17622333344",
-    "email": "info@10corp.com",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "45.6063",
+        "longitude": "-122.7255"
+    },
     "priceRange": "$$",
-    "openingHours": "Mo-Fr 09:00-17:00"
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+    },
+    "sameAs": [
+        "https:\/\/www.facebook.com\/10corp",
+        "https:\/\/www.twitter.com\/10corp",
+        "https:\/\/www.instagram.com\/10corp",
+        "https://www.linkedin.com/company/10corp/"
+    ],
+    "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "\u002b17622333344",
+        "contactType": "Customer Service",
+        "email": "info@10corp.com",
+        "areaServed": ["US", "CA", "GB"],
+        "availableLanguage": ["English", "Spanish", "French"]
+    }],
+    "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Design Services",
+        "itemListElement": [{
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Website Design",
+                "serviceType": "Web Design"
+            }
+        }, {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Web Hosting",
+                "serviceType": "Web Hosting"
+            }
+        }, {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Domain Registration",
+                "serviceType": "Domain Services"
+            }
+        }]
+    }
+}
+</script>
+
+<!-- WebSite Schema with Sitelinks SearchBox -->
+
+
+<!-- BreadcrumbList Schema -->
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "http:\/\/localhost:1313\/"
+        }
+        
+        
+        
+            
+        
+            
+                
+                ,{
+                    "@type": "ListItem",
+                    "position":  3 ,
+                    "name": "Hosting",
+                    "item": "http:\/\/localhost:1313\/hosting\/"
+                }
+            
+        
+            
+                
+                ,{
+                    "@type": "ListItem",
+                    "position":  4 ,
+                    "name": "Shared hosting",
+                    "item": "http:\/\/localhost:1313\/hosting\/shared-hosting\/"
+                }
+            
+        
+            
+        
+    ]
 }
 </script>
 
 
+<!-- Review Schema -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -160,151 +256,70 @@
         "ratingValue": "5",
         "bestRating": "5"
     },
-    "name": "10Corp",
-    "image": "http:\/\/localhost:1313\/images\/logo.png",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2709 N Hayden Island Dr. STE 520328",
-        "addressLocality": "Portland",
-        "addressRegion": "Oregon",
-        "postalCode": "97217",
-        "addressCountry": "US"
-    },
-    "telephone": "\u002b17622333344",
-    "email": "info@10corp.com",
-    "priceRange": "$$",
-    "openingHours": "Mo-Fr 09:00-17:00",
     "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": "10Corp",
+        "image": "http:\/\/localhost:1313\/images\/logo.png"
+
+"\u003c!-- Service Offerings Schema --\u003e"
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Web Design Services",
+    "itemListElement": [{
         "@type": "Service",
-        "name": "10Corp",
-        "serviceType": "Website Builder Service"
-    }
-}
-</script>
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Website Builder - Standard Plan",
-    "description": "Inisi neque aliquet vel dapibus id, mattis velnisi. Sed pretiuligula sollicitudin.",
-    "provider": {
-        "@type": "Organization",
-        "name": "10Corp",
-        "url": "http:\/\/localhost:1313\/",
-        "telephone": "\u002b17622333344",
-        "email": "info@10corp.com"
-    },
-    "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "299.99",
-        "priceValidUntil": "2025-12-31", 
-        "url": "http:\/\/localhost:1313\/hosting\/shared-hosting\/",
-        "eligibleRegion": {
-            "@type": "Place",
-            "name": "Worldwide"
+        "position": 1,
+        "name": "Website Design - Standard Plan",
+        "description": "Professional website design with responsive layout and modern features",
+        "provider": {
+            "@type": "Organization",
+            "name": "10Corp"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "299.99",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock"
         }
-    }
-}
-</script>
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Website Builder - Popular Plan",
-    "description": "Aliquet vel dapibus id, mattis velnisi. Sed pretiuligula sollicitudin.",
-    "provider": {
-        "@type": "Organization",
-        "name": "10Corp",
-        "url": "http:\/\/localhost:1313\/",
-        "telephone": "\u002b17622333344",
-        "email": "info@10corp.com"
-    },
-    "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "599.99",
-        "priceValidUntil": "2025-12-31", 
-        "url": "http:\/\/localhost:1313\/hosting\/shared-hosting\/",
-        "eligibleRegion": {
-            "@type": "Place",
-            "name": "Worldwide"
+    }, {
+        "@type": "Service",
+        "position": 2,
+        "name": "Website Design - Professional Plan",
+        "description": "Advanced website design with enhanced features and customization",
+        "provider": {
+            "@type": "Organization",
+            "name": "10Corp"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "599.99",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock"
         }
-    }
-}
-</script>
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Website Builder - Enterprise Plan",
-    "description": "Sed pretiuligula sollicitudin nullam mollis. Ut justo. Suspendisse potenti.",
-    "provider": {
-        "@type": "Organization",
-        "name": "10Corp",
-        "url": "http:\/\/localhost:1313\/",
-        "telephone": "\u002b17622333344",
-        "email": "info@10corp.com"
-    },
-    "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "899.99",
-        "priceValidUntil": "2025-12-31", 
-        "url": "http:\/\/localhost:1313\/hosting\/shared-hosting\/",
-        "eligibleRegion": {
-            "@type": "Place",
-            "name": "Worldwide"
+    }, {
+        "@type": "Service",
+        "position": 3,
+        "name": "Website Design - Enterprise Plan",
+        "description": "Premium enterprise website design with full-service support",
+        "provider": {
+            "@type": "Organization",
+            "name": "10Corp"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "899.99",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock"
         }
-    }
+    }]
 }
 </script>
 
 
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "10Corp",
-    "url": "http:\/\/localhost:1313\/",
-    "logo": "http:\/\/localhost:1313\/images\/logo.png",
-    "telephone": "\u002b17622333344",
-    "email": "info@10corp.com",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2709 N Hayden Island Dr. STE 520328",
-        "addressLocality": "Portland",
-        "addressRegion": "Oregon",
-        "postalCode": "97217",
-        "addressCountry": "US"
-    },
-    "sameAs": [
-        "https:\/\/www.facebook.com\/10corp",
-        "https:\/\/www.twitter.com\/10corp",
-        "https:\/\/www.instagram.com\/10corp"
-    ],
-    "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "\u002b17622333344",
-        "contactType": "Customer Service"
-    },
-    "additionalType": "https://schema.org/LocalBusiness",
-    "priceRange": "$$",
-    "openingHours": "Mo-Fr 09:00-17:00",
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "bestRating": "5",
-        "ratingCount": "100"
-    }
-}
-</script>
 
 </head>
 
@@ -897,7 +912,9 @@
                     <div class="title">Aliquam tincidunt mauris eu risus?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -907,7 +924,9 @@
                     <div class="title">Vestibulum auctor dapibus neque?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -917,7 +936,9 @@
                     <div class="title">Nunc dignissim risus id metus?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -927,7 +948,9 @@
                     <div class="title">Cras ornare tristique elit?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -937,7 +960,9 @@
                     <div class="title">Vivamus vestibulum ntulla nec ante?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -956,7 +981,9 @@
                     <div class="title">Praesent placerat risus quis eros?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -966,7 +993,9 @@
                     <div class="title">Fusce pellentesque suscipit nibh?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -976,7 +1005,9 @@
                     <div class="title">Integer vitae libero ac risus egestas placerat?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -986,7 +1017,9 @@
                     <div class="title">Vestibulum commodo felis quis tortor?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1005,7 +1038,9 @@
                     <div class="title">Nunc dignissim risus id metus?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1015,7 +1050,9 @@
                     <div class="title">Cras ornare tristique elit?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1025,7 +1062,9 @@
                     <div class="title">Vivamus vestibulum ntulla nec ante?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1044,7 +1083,9 @@
                     <div class="title">Aliquam tincidunt mauris eu risus?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1054,7 +1095,9 @@
                     <div class="title">Vestibulum auctor dapibus neque?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1064,7 +1107,9 @@
                     <div class="title">Nunc dignissim risus id metus?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1074,7 +1119,9 @@
                     <div class="title">Cras ornare tristique elit?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1084,7 +1131,9 @@
                     <div class="title">Vivamus vestibulum ntulla nec ante?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             
@@ -1094,7 +1143,9 @@
                     <div class="title">Praesent placerat risus quis eros?</div>
                 </a>
                 <div class="content">
-                   <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p> 
+                  
+<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sedegestas, antet vulputate volutpat, eros pede semperest.</p>
+
                 </div>
             </div>
             

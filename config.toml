@@ -8,6 +8,8 @@ summaryLength = 20
 DefaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false 
 disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableGitInfo = false
 
 [languages]
   # English Setup
@@ -191,6 +193,10 @@ disableHugoGeneratorInject = true
   authorName = "Mahmudul Hasan"
   disqusComments = "test"
   formspreeURL = ""
+  
+  # SEO SETTINGS
+  description = "10Corp is a leading web design company specializing in custom websites, eCommerce development, hosting, domains, and digital marketing services."
+  defaultImage = "/images/logo.png"
   
   # GOOGLE ANALYTICS
   googleAnalytics = "G-XXXXXXXXXX" 
